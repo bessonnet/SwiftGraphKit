@@ -19,30 +19,30 @@
 		4CF5865BAF828AB9A7C56F3A1B1C856F /* FBSnapshotTestCase-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A11D5B54955E3381F067364E427B571A /* FBSnapshotTestCase-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4D600539FC2E29EA7E28A2DA8A8B328C /* FBSnapshotTestCasePlatform.h in Headers */ = {isa = PBXBuildFile; fileRef = 7E3DB4D092B985E76E227F7F313C6981 /* FBSnapshotTestCasePlatform.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4F7BD484FB402A43887E35E364F04D94 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1A94602875A48A997AD3F08A33E6EAA /* Foundation.framework */; };
-		56E8981E219839A9006D1C3E /* VerticalAxis.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E8981B219839A9006D1C3E /* VerticalAxis.swift */; };
-		56E8981F219839A9006D1C3E /* Axis.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E8981C219839A9006D1C3E /* Axis.swift */; };
-		56E89820219839A9006D1C3E /* HorizontalAxis.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E8981D219839A9006D1C3E /* HorizontalAxis.swift */; };
-		56E89823219839C3006D1C3E /* AxisItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E89822219839C3006D1C3E /* AxisItem.swift */; };
-		56E8982B21983A1A006D1C3E /* DrawerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E8982621983A1A006D1C3E /* DrawerView.swift */; };
-		56E8982C21983A1A006D1C3E /* DrawerView+Convert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E8982721983A1A006D1C3E /* DrawerView+Convert.swift */; };
-		56E8982D21983A1A006D1C3E /* DrawerView+Feedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E8982821983A1A006D1C3E /* DrawerView+Feedback.swift */; };
-		56E8982E21983A1A006D1C3E /* DrawerView+Autoresize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E8982921983A1A006D1C3E /* DrawerView+Autoresize.swift */; };
-		56E8982F21983A1A006D1C3E /* DrawerView+Layer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E8982A21983A1A006D1C3E /* DrawerView+Layer.swift */; };
-		56E8983321983A31006D1C3E /* BKZoomManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E8983121983A31006D1C3E /* BKZoomManager.swift */; };
-		56E8983421983A31006D1C3E /* BKAutoresizeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E8983221983A31006D1C3E /* BKAutoresizeManager.swift */; };
-		56E8983B21983A8B006D1C3E /* CGPoint+Norm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E8983621983A8B006D1C3E /* CGPoint+Norm.swift */; };
-		56E8983C21983A8B006D1C3E /* BezierGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E8983721983A8B006D1C3E /* BezierGraph.swift */; };
-		56E8983D21983A8B006D1C3E /* BreakLineGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E8983821983A8B006D1C3E /* BreakLineGraph.swift */; };
-		56E8983E21983A8B006D1C3E /* BezierGraph+Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E8983921983A8B006D1C3E /* BezierGraph+Gradient.swift */; };
-		56E8983F21983A8B006D1C3E /* Graph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E8983A21983A8B006D1C3E /* Graph.swift */; };
-		56E8984421983AA3006D1C3E /* GraphPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E8984121983AA3006D1C3E /* GraphPoint.swift */; };
-		56E8984521983AA3006D1C3E /* RoundedBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E8984221983AA3006D1C3E /* RoundedBar.swift */; };
-		56E8984621983AA3006D1C3E /* RoundedPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E8984321983AA3006D1C3E /* RoundedPoint.swift */; };
-		56E8984D21983AD8006D1C3E /* Grid+AutoResize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E8984921983AD7006D1C3E /* Grid+AutoResize.swift */; };
-		56E8984E21983AD8006D1C3E /* VerticalLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E8984A21983AD7006D1C3E /* VerticalLine.swift */; };
-		56E8984F21983AD8006D1C3E /* HorizontalLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E8984B21983AD7006D1C3E /* HorizontalLine.swift */; };
-		56E8985021983AD8006D1C3E /* Grid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E8984C21983AD7006D1C3E /* Grid.swift */; };
-		56E8985221983AE5006D1C3E /* LayerPool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E8985121983AE5006D1C3E /* LayerPool.swift */; };
+		56E8985321983D68006D1C3E /* LayerPool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E8985121983AE5006D1C3E /* LayerPool.swift */; };
+		56E8985521983D74006D1C3E /* Grid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E8984C21983AD7006D1C3E /* Grid.swift */; };
+		56E8985621983D78006D1C3E /* Grid+AutoResize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E8984921983AD7006D1C3E /* Grid+AutoResize.swift */; };
+		56E8985721983D7B006D1C3E /* HorizontalLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E8984B21983AD7006D1C3E /* HorizontalLine.swift */; };
+		56E8985821983D7F006D1C3E /* VerticalLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E8984A21983AD7006D1C3E /* VerticalLine.swift */; };
+		56E8985921983D85006D1C3E /* GraphPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E8984121983AA3006D1C3E /* GraphPoint.swift */; };
+		56E8985A21983D85006D1C3E /* RoundedBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E8984221983AA3006D1C3E /* RoundedBar.swift */; };
+		56E8985B21983D85006D1C3E /* RoundedPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E8984321983AA3006D1C3E /* RoundedPoint.swift */; };
+		56E8985C21983D85006D1C3E /* BezierGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E8983721983A8B006D1C3E /* BezierGraph.swift */; };
+		56E8985D21983D85006D1C3E /* BezierGraph+Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E8983921983A8B006D1C3E /* BezierGraph+Gradient.swift */; };
+		56E8985E21983D85006D1C3E /* BreakLineGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E8983821983A8B006D1C3E /* BreakLineGraph.swift */; };
+		56E8985F21983D85006D1C3E /* CGPoint+Norm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E8983621983A8B006D1C3E /* CGPoint+Norm.swift */; };
+		56E8986021983D85006D1C3E /* Graph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E8983A21983A8B006D1C3E /* Graph.swift */; };
+		56E8986121983D98006D1C3E /* AxisItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E89822219839C3006D1C3E /* AxisItem.swift */; };
+		56E8986221983D98006D1C3E /* Axis.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E8981C219839A9006D1C3E /* Axis.swift */; };
+		56E8986321983D98006D1C3E /* HorizontalAxis.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E8981D219839A9006D1C3E /* HorizontalAxis.swift */; };
+		56E8986421983D98006D1C3E /* VerticalAxis.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E8981B219839A9006D1C3E /* VerticalAxis.swift */; };
+		56E8986521983D9C006D1C3E /* BKAutoresizeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E8983221983A31006D1C3E /* BKAutoresizeManager.swift */; };
+		56E8986621983D9C006D1C3E /* BKZoomManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E8983121983A31006D1C3E /* BKZoomManager.swift */; };
+		56E8986721983D9C006D1C3E /* DrawerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E8982621983A1A006D1C3E /* DrawerView.swift */; };
+		56E8986821983D9C006D1C3E /* DrawerView+Autoresize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E8982921983A1A006D1C3E /* DrawerView+Autoresize.swift */; };
+		56E8986921983D9C006D1C3E /* DrawerView+Convert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E8982721983A1A006D1C3E /* DrawerView+Convert.swift */; };
+		56E8986A21983D9C006D1C3E /* DrawerView+Feedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E8982821983A1A006D1C3E /* DrawerView+Feedback.swift */; };
+		56E8986B21983D9C006D1C3E /* DrawerView+Layer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E8982A21983A1A006D1C3E /* DrawerView+Layer.swift */; };
 		59FD5FAEFCF13CD39358A6F36C50BED8 /* FBSnapshotTestController.h in Headers */ = {isa = PBXBuildFile; fileRef = 1374B79237CAC07693E99442FBED1F15 /* FBSnapshotTestController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		63EA4B9CBBAB30A69C2D73693019FDC5 /* UIImage+Compare.h in Headers */ = {isa = PBXBuildFile; fileRef = 432938111B6FF0189EFFEDF2F845B308 /* UIImage+Compare.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		6B71ACB6D56B970D0B2AD8EE2B79D96F /* FBSnapshotTestCasePlatform.m in Sources */ = {isa = PBXBuildFile; fileRef = 58A2557E7CE20AACCD1B28B1CD1F920D /* FBSnapshotTestCasePlatform.m */; };
@@ -691,39 +691,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				56E8981E219839A9006D1C3E /* VerticalAxis.swift in Sources */,
-				56E8983C21983A8B006D1C3E /* BezierGraph.swift in Sources */,
 				459F58959A5C947E77A424BF94098D08 /* FBSnapshotTestCase-dummy.m in Sources */,
 				6EC17B6986CC7F9EBDF0521AE86F371B /* FBSnapshotTestCase.m in Sources */,
-				56E8985221983AE5006D1C3E /* LayerPool.swift in Sources */,
-				56E8984621983AA3006D1C3E /* RoundedPoint.swift in Sources */,
-				56E8984E21983AD8006D1C3E /* VerticalLine.swift in Sources */,
-				56E8983B21983A8B006D1C3E /* CGPoint+Norm.swift in Sources */,
-				56E8983421983A31006D1C3E /* BKAutoresizeManager.swift in Sources */,
-				56E8982F21983A1A006D1C3E /* DrawerView+Layer.swift in Sources */,
-				56E8983321983A31006D1C3E /* BKZoomManager.swift in Sources */,
 				6B71ACB6D56B970D0B2AD8EE2B79D96F /* FBSnapshotTestCasePlatform.m in Sources */,
-				56E8985021983AD8006D1C3E /* Grid.swift in Sources */,
-				56E8983F21983A8B006D1C3E /* Graph.swift in Sources */,
-				56E8982E21983A1A006D1C3E /* DrawerView+Autoresize.swift in Sources */,
-				56E8982D21983A1A006D1C3E /* DrawerView+Feedback.swift in Sources */,
 				E2E2BC984CCC1978CB9E22B72258C641 /* FBSnapshotTestController.m in Sources */,
 				163DC390363C339936B3114C72FE6716 /* SwiftSupport.swift in Sources */,
-				56E89820219839A9006D1C3E /* HorizontalAxis.swift in Sources */,
-				56E8982B21983A1A006D1C3E /* DrawerView.swift in Sources */,
-				56E8984D21983AD8006D1C3E /* Grid+AutoResize.swift in Sources */,
 				AFF108D6E8D891F7B8148CA0158B2A23 /* UIApplication+StrictKeyWindow.m in Sources */,
-				56E8981F219839A9006D1C3E /* Axis.swift in Sources */,
-				56E8983E21983A8B006D1C3E /* BezierGraph+Gradient.swift in Sources */,
-				56E8984421983AA3006D1C3E /* GraphPoint.swift in Sources */,
 				4C022C88B9E8D527B1426B5281756EDE /* UIImage+Compare.m in Sources */,
 				E4877E179010E4E588B6E9E61B047B60 /* UIImage+Diff.m in Sources */,
-				56E8984F21983AD8006D1C3E /* HorizontalLine.swift in Sources */,
 				EA2C5FBB576DBC67BE3E2F5897704BBF /* UIImage+Snapshot.m in Sources */,
-				56E8982C21983A1A006D1C3E /* DrawerView+Convert.swift in Sources */,
-				56E8983D21983A8B006D1C3E /* BreakLineGraph.swift in Sources */,
-				56E8984521983AA3006D1C3E /* RoundedBar.swift in Sources */,
-				56E89823219839C3006D1C3E /* AxisItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -739,7 +715,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				56E8986721983D9C006D1C3E /* DrawerView.swift in Sources */,
+				56E8985621983D78006D1C3E /* Grid+AutoResize.swift in Sources */,
+				56E8985A21983D85006D1C3E /* RoundedBar.swift in Sources */,
+				56E8986421983D98006D1C3E /* VerticalAxis.swift in Sources */,
+				56E8986021983D85006D1C3E /* Graph.swift in Sources */,
+				56E8986921983D9C006D1C3E /* DrawerView+Convert.swift in Sources */,
+				56E8986321983D98006D1C3E /* HorizontalAxis.swift in Sources */,
+				56E8986121983D98006D1C3E /* AxisItem.swift in Sources */,
+				56E8985E21983D85006D1C3E /* BreakLineGraph.swift in Sources */,
+				56E8986621983D9C006D1C3E /* BKZoomManager.swift in Sources */,
+				56E8985921983D85006D1C3E /* GraphPoint.swift in Sources */,
 				3BC7EC123BBDD827355EB33531F5F429 /* SwiftGraphKit-dummy.m in Sources */,
+				56E8986A21983D9C006D1C3E /* DrawerView+Feedback.swift in Sources */,
+				56E8985321983D68006D1C3E /* LayerPool.swift in Sources */,
+				56E8986521983D9C006D1C3E /* BKAutoresizeManager.swift in Sources */,
+				56E8985521983D74006D1C3E /* Grid.swift in Sources */,
+				56E8985B21983D85006D1C3E /* RoundedPoint.swift in Sources */,
+				56E8986B21983D9C006D1C3E /* DrawerView+Layer.swift in Sources */,
+				56E8986221983D98006D1C3E /* Axis.swift in Sources */,
+				56E8986821983D9C006D1C3E /* DrawerView+Autoresize.swift in Sources */,
+				56E8985F21983D85006D1C3E /* CGPoint+Norm.swift in Sources */,
+				56E8985D21983D85006D1C3E /* BezierGraph+Gradient.swift in Sources */,
+				56E8985721983D7B006D1C3E /* HorizontalLine.swift in Sources */,
+				56E8985821983D7F006D1C3E /* VerticalLine.swift in Sources */,
+				56E8985C21983D85006D1C3E /* BezierGraph.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
