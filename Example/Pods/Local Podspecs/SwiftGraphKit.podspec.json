@@ -1,0 +1,22 @@
+{
+  "name": "SwiftGraphKit",
+  "version": "0.1.0",
+  "summary": "A short description of SwiftGraphKit.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/charles.bessonnet91@orange.fr/SwiftGraphKit",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "charles.bessonnet91@orange.fr": "charles.bessonnet91@orange.fr"
+  },
+  "source": {
+    "git": "https://github.com/charles.bessonnet91@orange.fr/SwiftGraphKit.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "SwiftGraphKit/Classes/**/*"
+}

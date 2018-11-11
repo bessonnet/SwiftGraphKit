@@ -1,0 +1,6 @@
+framework module Pods_SwiftGraphKit_Tests {
+  umbrella header "Pods-SwiftGraphKit_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,6 @@
+framework module SwiftGraphKit {
+  umbrella header "SwiftGraphKit-umbrella.h"
+
+  export *
+  module * { export * }
+}
