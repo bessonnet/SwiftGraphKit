@@ -43,6 +43,8 @@
 		56E8986921983D9C006D1C3E /* DrawerView+Convert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E8982721983A1A006D1C3E /* DrawerView+Convert.swift */; };
 		56E8986A21983D9C006D1C3E /* DrawerView+Feedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E8982821983A1A006D1C3E /* DrawerView+Feedback.swift */; };
 		56E8986B21983D9C006D1C3E /* DrawerView+Layer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E8982A21983A1A006D1C3E /* DrawerView+Layer.swift */; };
+		56E89872219841E1006D1C3E /* GraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E89870219841E1006D1C3E /* GraphView.swift */; };
+		56E89875219841E9006D1C3E /* LayerZPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E89873219841E9006D1C3E /* LayerZPosition.swift */; };
 		59FD5FAEFCF13CD39358A6F36C50BED8 /* FBSnapshotTestController.h in Headers */ = {isa = PBXBuildFile; fileRef = 1374B79237CAC07693E99442FBED1F15 /* FBSnapshotTestController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		63EA4B9CBBAB30A69C2D73693019FDC5 /* UIImage+Compare.h in Headers */ = {isa = PBXBuildFile; fileRef = 432938111B6FF0189EFFEDF2F845B308 /* UIImage+Compare.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		6B71ACB6D56B970D0B2AD8EE2B79D96F /* FBSnapshotTestCasePlatform.m in Sources */ = {isa = PBXBuildFile; fileRef = 58A2557E7CE20AACCD1B28B1CD1F920D /* FBSnapshotTestCasePlatform.m */; };
@@ -135,6 +137,8 @@
 		56E8984B21983AD7006D1C3E /* HorizontalLine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HorizontalLine.swift; sourceTree = "<group>"; };
 		56E8984C21983AD7006D1C3E /* Grid.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Grid.swift; sourceTree = "<group>"; };
 		56E8985121983AE5006D1C3E /* LayerPool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayerPool.swift; sourceTree = "<group>"; };
+		56E89870219841E1006D1C3E /* GraphView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphView.swift; sourceTree = "<group>"; };
+		56E89873219841E9006D1C3E /* LayerZPosition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayerZPosition.swift; sourceTree = "<group>"; };
 		58A2557E7CE20AACCD1B28B1CD1F920D /* FBSnapshotTestCasePlatform.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSnapshotTestCasePlatform.m; path = FBSnapshotTestCase/FBSnapshotTestCasePlatform.m; sourceTree = "<group>"; };
 		67E276593855381568F725E69496F29C /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6F3348D2E1ED4758EC37C0CC5B9C502A /* SwiftGraphKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftGraphKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -294,6 +298,8 @@
 		56E8980B219838A7006D1C3E /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				56E89873219841E9006D1C3E /* LayerZPosition.swift */,
+				56E89870219841E1006D1C3E /* GraphView.swift */,
 				56E8984821983ABE006D1C3E /* Pool */,
 				56E8984721983AB5006D1C3E /* Grid */,
 				56E8983521983A64006D1C3E /* Graph */,
@@ -717,6 +723,7 @@
 			files = (
 				56E8986721983D9C006D1C3E /* DrawerView.swift in Sources */,
 				56E8985621983D78006D1C3E /* Grid+AutoResize.swift in Sources */,
+				56E89875219841E9006D1C3E /* LayerZPosition.swift in Sources */,
 				56E8985A21983D85006D1C3E /* RoundedBar.swift in Sources */,
 				56E8986421983D98006D1C3E /* VerticalAxis.swift in Sources */,
 				56E8986021983D85006D1C3E /* Graph.swift in Sources */,
@@ -734,6 +741,7 @@
 				56E8985B21983D85006D1C3E /* RoundedPoint.swift in Sources */,
 				56E8986B21983D9C006D1C3E /* DrawerView+Layer.swift in Sources */,
 				56E8986221983D98006D1C3E /* Axis.swift in Sources */,
+				56E89872219841E1006D1C3E /* GraphView.swift in Sources */,
 				56E8986821983D9C006D1C3E /* DrawerView+Autoresize.swift in Sources */,
 				56E8985F21983D85006D1C3E /* CGPoint+Norm.swift in Sources */,
 				56E8985D21983D85006D1C3E /* BezierGraph+Gradient.swift in Sources */,
@@ -874,7 +882,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-SwiftGraphKit_Tests/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-SwiftGraphKit_Tests/Pods-SwiftGraphKit_Tests.modulemap";
@@ -909,7 +917,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/SwiftGraphKit/SwiftGraphKit-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/SwiftGraphKit/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/SwiftGraphKit/SwiftGraphKit.modulemap";
 				PRODUCT_MODULE_NAME = SwiftGraphKit;
@@ -918,7 +926,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -942,7 +950,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/SwiftGraphKit/SwiftGraphKit-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/SwiftGraphKit/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/SwiftGraphKit/SwiftGraphKit.modulemap";
 				PRODUCT_MODULE_NAME = SwiftGraphKit;
@@ -951,7 +959,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -974,7 +982,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-SwiftGraphKit_Example/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-SwiftGraphKit_Example/Pods-SwiftGraphKit_Example.modulemap";
@@ -1009,7 +1017,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-SwiftGraphKit_Example/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-SwiftGraphKit_Example/Pods-SwiftGraphKit_Example.modulemap";
@@ -1141,7 +1149,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-SwiftGraphKit_Tests/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-SwiftGraphKit_Tests/Pods-SwiftGraphKit_Tests.modulemap";
