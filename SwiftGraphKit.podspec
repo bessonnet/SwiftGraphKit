@@ -31,10 +31,10 @@ SwiftGraphKit is a framework to draw graph on your app. GraphView are scrollable
 
   s.ios.deployment_target = '10.0'
 
-  s.source_files = 'SwiftGraphKit/Classes/**/*'
+  s.source_files = 'Classes/**/*'
   
   # s.resource_bundles = {
-  #   'SwiftGraphKit' => ['SwiftGraphKit/Assets/*.png']
+  #   'SwiftGraphKit' => ['Assets/*.png']
   # }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'

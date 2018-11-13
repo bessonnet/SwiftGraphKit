@@ -12,18 +12,23 @@ import SwiftGraphKit
 
 class ViewController: UIViewController {
     
-    private lazy var graphView: GraphView = {
-        let graphView = GraphView()
-        graphView.translatesAutoresizingMaskIntoConstraints = false
-        return graphView
+    enum GraphSample: String, CaseIterable {
+        case simpleGraph        = "Simple Graph"
+        case scrollableGraph    = "Scrollable Graph"
+    }
+    
+    private lazy var tableView: UITableView = {
+        let tableView = UITableView()
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        
+        tableView.dataSource = self
+        tableView.delegate   = self
+        
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: String(describing: UITableViewCell.self))
+        
+        return tableView
     }()
     
-    private lazy var graph: BezierGraph = {
-        let graph = BezierGraph()
-        graph.color     = .darkGray
-        graph.thickness = 3.0
-        return graph
-    }()
     
     // MARK: - Life cycle
     
@@ -32,55 +37,54 @@ class ViewController: UIViewController {
         
         setupInterface()
         setupConstraints()
-        
-        configureGraphView()
     }
     
     // MARK: - Setup Interface
     
     private func setupInterface() {
-        view.addSubview(graphView)
+        view.addSubview(tableView)
     }
     
     private func setupConstraints() {
         NSLayoutConstraint.activate([
-            graphView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            graphView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
-            
-            graphView.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.9),
-            graphView.heightAnchor.constraint(equalTo: graphView.widthAnchor),
+            tableView.topAnchor.constraint(equalTo: topLayoutGuide.bottomAnchor),
+            tableView.leftAnchor.constraint(equalTo: view.leftAnchor),
+            tableView.rightAnchor.constraint(equalTo: view.rightAnchor),
+            tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
             ])
     }
-    
-    // MARK: - Configure Graph
-    
-    private func configureGraphView() {
-        
-        let dataFrame = CGRect(x: 0, y: -2, width: 10, height: 14)
-        let dataArea  = CGRect(x: -20, y: -2, width: 30, height: 14)
-        
-        // configure graph
-        
-        var points = [GraphPoint]()
-        
-        for x in Int(dataArea.minX)..<Int(dataArea.maxX) {
-            let y = Float.random(in: -10.0..<10.0)
-            let roundedPoint = RoundedPoint(x: CGFloat(x), y: CGFloat(y))
-            points.append(roundedPoint)
-        }
-        
-        graph.addData(data: points)
-        
-        // Add decoration
-        
-        let grid = Grid(stepX: 1.0, stepY: 1.0)
-        grid.color = .lightGray
-        graphView.set(grid: grid)
-        
-        // Configure Graph View
-        
-        graphView.add(graph: graph)
-        graphView.configure(dataFrame: dataFrame, dataArea: dataArea)
+}
+
+extension ViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return GraphSample.allCases.count
     }
     
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: UITableViewCell.self), for: indexPath)
+        
+        let typeGraph = GraphSample.allCases[indexPath.row]
+        cell.textLabel?.text = typeGraph.rawValue
+        
+        return cell
+    }
+    
+    
+    
+}
+
+extension ViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let typeGraph = GraphSample.allCases[indexPath.row]
+        
+        let viewController: UIViewController
+        switch typeGraph {
+        case .simpleGraph:
+            viewController = SimpleGraphViewController()
+        case .scrollableGraph:
+            viewController = ScrollableGraphViewController()
+        }
+        
+        navigationController?.pushViewController(viewController, animated: true)
+    }
 }

@@ -100,6 +100,7 @@ public class DrawerView: UIView {
     }
     
     private func updateScrollViewContentSize() {
+        guard frame.size != .zero else { return }
         guard dataFrame.width != 0 else { return }
         
         let width   = dataArea.width / dataFrame.width
@@ -113,6 +114,8 @@ public class DrawerView: UIView {
     
     @objc
     func runLoop() {
+        guard frame.size != .zero else { return }
+        guard dataFrame.width != 0 else { return }
         guard let timestamp = displayLink?.timestamp else { return }
         self.updateDataFrameForAutoresize(timestamp: timestamp)
         guard previousDataFrame != dataFrame || previousDataFrame == CGRect.zero || forceToRedraw else { return }
@@ -313,6 +316,8 @@ extension DrawerView: UIScrollViewDelegate {
     // MARK: - Scroll
     
     public func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        guard self.frame != .zero else { return }
+        
         let offsetX = scrollView.contentOffset.x
         let ratioX  = offsetX / self.frame.width
         let x = self.dataArea.minX + ratioX * self.dataFrame.width
