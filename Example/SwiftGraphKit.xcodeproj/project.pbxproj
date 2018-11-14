@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		567C6DC7219CC32000DA7E54 /* graph.png in Resources */ = {isa = PBXBuildFile; fileRef = 567C6DC6219CC32000DA7E54 /* graph.png */; };
 		56BDED6E219A1CB7005C552B /* SimpleGraphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56BDED6D219A1CB7005C552B /* SimpleGraphViewController.swift */; };
 		56BDED70219A1D52005C552B /* ScrollableGraphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56BDED6F219A1D52005C552B /* ScrollableGraphViewController.swift */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
@@ -34,6 +35,7 @@
 		4253923AA35353C00BBD70E1 /* Pods_SwiftGraphKit_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftGraphKit_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CF4139275787495D808D730 /* Pods_SwiftGraphKit_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftGraphKit_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FC79160283D2F2143C1B727 /* SwiftGraphKit.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = SwiftGraphKit.podspec; path = ../SwiftGraphKit.podspec; sourceTree = "<group>"; };
+		567C6DC6219CC32000DA7E54 /* graph.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = graph.png; sourceTree = "<group>"; };
 		56BDED6D219A1CB7005C552B /* SimpleGraphViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleGraphViewController.swift; sourceTree = "<group>"; };
 		56BDED6F219A1D52005C552B /* ScrollableGraphViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollableGraphViewController.swift; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* SwiftGraphKit_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftGraphKit_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -82,6 +84,14 @@
 				8FBE6FC0AF3237A76E4441CE /* Pods-SwiftGraphKit_Tests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		567C6DC5219CC2F000DA7E54 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				567C6DC6219CC32000DA7E54 /* graph.png */,
+			);
+			path = Images;
 			sourceTree = "<group>";
 		};
 		56BDED6C219A1C66005C552B /* Graph Sample */ = {
@@ -157,6 +167,7 @@
 		607FACF51AFB993E008FA782 /* Podspec Metadata */ = {
 			isa = PBXGroup;
 			children = (
+				567C6DC5219CC2F000DA7E54 /* Images */,
 				4FC79160283D2F2143C1B727 /* SwiftGraphKit.podspec */,
 				ED3268F92BBE2709999533FD /* README.md */,
 				FA13851A3E83FA0F2654357C /* LICENSE */,
@@ -262,6 +273,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				567C6DC7219CC32000DA7E54 /* graph.png in Resources */,
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
