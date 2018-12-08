@@ -1,6 +1,6 @@
 # SwiftGraphKit
 
-[![CI Status](https://img.shields.io/travis/cbessonnet@gmail.com/SwiftGraphKit.svg?style=flat)](https://travis-ci.org/cbessonnet@gmail.com/SwiftGraphKit)
+[![CI Status](https://img.shields.io/travis/cbessonnet75@gmail.com/SwiftGraphKit.svg?style=flat)](https://travis-ci.org/cbessonnet75@gmail.com/SwiftGraphKit)
 [![Version](https://img.shields.io/cocoapods/v/SwiftGraphKit.svg?style=flat)](https://cocoapods.org/pods/SwiftGraphKit)
 [![License](https://img.shields.io/cocoapods/l/SwiftGraphKit.svg?style=flat)](https://cocoapods.org/pods/SwiftGraphKit)
 [![Platform](https://img.shields.io/cocoapods/p/SwiftGraphKit.svg?style=flat)](https://cocoapods.org/pods/SwiftGraphKit)
@@ -108,7 +108,7 @@ All objects of framework is CALayer or a subclass of this class. You will find a
 
 ## Author
 
-cbessonnet@gmail.com
+Charles BESSONNET, you can write me to cbessonnet75@gmail.com.
 
 ## License
 
