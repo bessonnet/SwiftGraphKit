@@ -13,8 +13,15 @@ public protocol BKGraphDataSource: class {
 }
 
 public class Graph: CALayer, CALayerDelegate {
+    
+    /// points of graphs
     public var points: [GraphPoint] = []
+    /// data source of graph, it's optional. If data is now accesible now you can use to have dynamic
     public weak var dataSource: BKGraphDataSource?
+    
+    var function: Function?
+    var basePoint: GraphPoint?
+    var stepFunction: CGFloat?
     
     //MARK: Object lifecycle
     
@@ -69,16 +76,25 @@ public class Graph: CALayer, CALayerDelegate {
         }
     }
     
+    func fetchRequiredPoints(in graphView: DrawerView) {
+        guard let (min, max) = self.missingPoints(in: graphView.dataFrame) else { return }
+        
+        if dataSource != nil {
+            fetchRequiredPointsWithDataSource(in: graphView, between: min, to: max)
+        } else if function != nil {
+            
+        }
+    }
     
     // MARK: - Fetch (dataSource)
     
-    func fetchRequiredPoints(in graphView: DrawerView) {
+    
+    func fetchRequiredPointsWithDataSource(in graphView: DrawerView, between min: CGFloat, to max: CGFloat) {
         guard let dataSource = self.dataSource else { return }
-        guard var (min, max) = self.missingPoints(in: graphView.dataFrame) else { return }
         
         // check validity of (min, max) with data area
-        min = CGFloat.maximum(min, graphView.dataArea.minX)
-        max = CGFloat.minimum(max, graphView.dataArea.maxX)
+        let min = CGFloat.maximum(min, graphView.dataArea.minX)
+        let max = CGFloat.minimum(max, graphView.dataArea.maxX)
         
         dataSource.graph(graph: self, requestDataBetween: min, maxX: max) { (points) -> (Void) in
             self.addData(data: points)

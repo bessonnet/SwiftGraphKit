@@ -19,6 +19,8 @@
 		4CF5865BAF828AB9A7C56F3A1B1C856F /* FBSnapshotTestCase-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A11D5B54955E3381F067364E427B571A /* FBSnapshotTestCase-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4D600539FC2E29EA7E28A2DA8A8B328C /* FBSnapshotTestCasePlatform.h in Headers */ = {isa = PBXBuildFile; fileRef = 7E3DB4D092B985E76E227F7F313C6981 /* FBSnapshotTestCasePlatform.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4F7BD484FB402A43887E35E364F04D94 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1A94602875A48A997AD3F08A33E6EAA /* Foundation.framework */; };
+		566CA73E21BBDF84004E4990 /* Graph+Function.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566CA73D21BBDF84004E4990 /* Graph+Function.swift */; };
+		566CA74121BC1105004E4990 /* CGFloat+Values.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566CA74021BC1105004E4990 /* CGFloat+Values.swift */; };
 		56E8985321983D68006D1C3E /* LayerPool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E8985121983AE5006D1C3E /* LayerPool.swift */; };
 		56E8985521983D74006D1C3E /* Grid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E8984C21983AD7006D1C3E /* Grid.swift */; };
 		56E8985621983D78006D1C3E /* Grid+AutoResize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E8984921983AD7006D1C3E /* Grid+AutoResize.swift */; };
@@ -113,6 +115,8 @@
 		4792533D7EE0F440EE722DA4999E845C /* FBSnapshotTestCase-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FBSnapshotTestCase-dummy.m"; sourceTree = "<group>"; };
 		4E7483B7D543DE4DA9873415860761BA /* Pods_SwiftGraphKit_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftGraphKit_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F246C4CC8B48BD9DACD4C4F931B3775 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		566CA73D21BBDF84004E4990 /* Graph+Function.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Graph+Function.swift"; sourceTree = "<group>"; };
+		566CA74021BC1105004E4990 /* CGFloat+Values.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+Values.swift"; sourceTree = "<group>"; };
 		56E8981B219839A9006D1C3E /* VerticalAxis.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerticalAxis.swift; sourceTree = "<group>"; };
 		56E8981C219839A9006D1C3E /* Axis.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Axis.swift; sourceTree = "<group>"; };
 		56E8981D219839A9006D1C3E /* HorizontalAxis.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HorizontalAxis.swift; sourceTree = "<group>"; };
@@ -295,11 +299,20 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
+		566CA73F21BC10E1004E4990 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				566CA74021BC1105004E4990 /* CGFloat+Values.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		56E8980B219838A7006D1C3E /* Classes */ = {
 			isa = PBXGroup;
 			children = (
 				56E89873219841E9006D1C3E /* LayerZPosition.swift */,
 				56E89870219841E1006D1C3E /* GraphView.swift */,
+				566CA73F21BC10E1004E4990 /* Helpers */,
 				56E8984821983ABE006D1C3E /* Pool */,
 				56E8984721983AB5006D1C3E /* Grid */,
 				56E8983521983A64006D1C3E /* Graph */,
@@ -359,6 +372,7 @@
 				56E8983821983A8B006D1C3E /* BreakLineGraph.swift */,
 				56E8983621983A8B006D1C3E /* CGPoint+Norm.swift */,
 				56E8983A21983A8B006D1C3E /* Graph.swift */,
+				566CA73D21BBDF84004E4990 /* Graph+Function.swift */,
 			);
 			path = Graph;
 			sourceTree = "<group>";
@@ -746,12 +760,14 @@
 				56E8985B21983D85006D1C3E /* RoundedPoint.swift in Sources */,
 				56E8986B21983D9C006D1C3E /* DrawerView+Layer.swift in Sources */,
 				56E8986221983D98006D1C3E /* Axis.swift in Sources */,
+				566CA74121BC1105004E4990 /* CGFloat+Values.swift in Sources */,
 				56E89872219841E1006D1C3E /* GraphView.swift in Sources */,
 				56E8986821983D9C006D1C3E /* DrawerView+Autoresize.swift in Sources */,
 				56E8985F21983D85006D1C3E /* CGPoint+Norm.swift in Sources */,
 				56E8985D21983D85006D1C3E /* BezierGraph+Gradient.swift in Sources */,
 				56E8985721983D7B006D1C3E /* HorizontalLine.swift in Sources */,
 				56E8985821983D7F006D1C3E /* VerticalLine.swift in Sources */,
+				566CA73E21BBDF84004E4990 /* Graph+Function.swift in Sources */,
 				56E8985C21983D85006D1C3E /* BezierGraph.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -27,7 +27,7 @@ class LayerPool {
     }
     
     func elementsBetween(min: CGFloat, max: CGFloat) -> [OrdonableLayer] {
-        let values = self.valueBetween(min: min, max: max, step: self.step)
+        let values = CGFloat.valueBetween(min: min, max: max, step: self.step)
     
         // Extract existing elements
         let minValue = values.first ?? 0
@@ -105,22 +105,5 @@ class LayerPool {
 
     func removeAllData() {
         self.layers.removeAll()
-    }
-    
-    // MARK: - Helpers
-    
-    private func valueBetween(min: CGFloat, max: CGFloat, step: CGFloat) -> [CGFloat] {
-        var result = [CGFloat]()
-        
-        let first = floor(min / step) * step
-        result.append(first)
-        
-        var current = first
-        while current < max {
-            current = current + step
-            result.append(current)
-        }
-        
-        return result
     }
 }
