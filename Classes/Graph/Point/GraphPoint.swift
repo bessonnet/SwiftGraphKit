@@ -74,3 +74,10 @@ public class GraphPoint: CALayer, CALayerDelegate {
         return NSNull()
     }
 }
+
+extension GraphPoint: NSCopying {
+    public func copy(with zone: NSZone? = nil) -> Any {
+        let copy = GraphPoint(x: x, y: y)
+        return copy
+    }
+}

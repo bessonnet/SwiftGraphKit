@@ -26,6 +26,12 @@ public class BreakLineGraph: Graph {
         self.breakLineShape.delegate = self
     }
     
+    public override init(function: @escaping Function, step: CGFloat, defaultPoint: GraphPoint) {
+        super.init(function: function, step: step, defaultPoint: defaultPoint)
+        
+        self.breakLineShape.delegate = self
+    }
+    
     public required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }

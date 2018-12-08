@@ -9,18 +9,11 @@ import UIKit
 
 public typealias Function = (CGFloat) -> CGFloat?
 
-extension Graph {
-
-    public convenience init(function: @escaping Function, step: CGFloat, defaultPoint: GraphPoint) {
-        self.init()
-        
-        self.function       = function
-        self.stepFunction   = step
-        self.basePoint      = defaultPoint
-    }
+public extension Graph {
     
-    func fetchRequiredPointsWithFunction(between min: CGFloat, to max: CGFloat) {
-        guard let step = stepFunction, let function = function, let point = basePoint else { return }
+    func fetchRequiredPointsWithFunction(in graphView: DrawerView, between min: CGFloat, to max: CGFloat) {
+        print("try draw")
+        guard let step = stepFunction, let function = function else { return }
         
         let values = CGFloat.valueBetween(min: min, max: max, step: step)
         
@@ -37,5 +30,7 @@ extension Graph {
             
             addData(data: points)
         }
+        print("draw: new point :\(points) - (\(min) - \(max))")
+        graphView.forceToRedraw = true
     }
 }

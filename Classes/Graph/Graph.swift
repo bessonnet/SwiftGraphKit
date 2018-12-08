@@ -34,6 +34,16 @@ public class Graph: CALayer, CALayerDelegate {
         super.init(layer: layer)
     }
     
+    public init(function: @escaping Function, step: CGFloat, defaultPoint: GraphPoint) {
+        super.init()
+        
+        self.delegate = self
+        
+        self.function       = function
+        self.stepFunction   = step
+        self.basePoint      = defaultPoint
+    }
+    
     public required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -82,7 +92,8 @@ public class Graph: CALayer, CALayerDelegate {
         if dataSource != nil {
             fetchRequiredPointsWithDataSource(in: graphView, between: min, to: max)
         } else if function != nil {
-            
+            print("here")
+            fetchRequiredPointsWithFunction(in: graphView, between: min, to: max)
         }
     }
     

@@ -15,6 +15,8 @@ class ViewController: UIViewController {
     enum GraphSample: String, CaseIterable {
         case simpleGraph        = "Simple Graph"
         case scrollableGraph    = "Scrollable Graph"
+        case dataSourceGraph    = "Graph with dataSource"
+        case functionGraph      = "Graph with function"
     }
     
     private lazy var tableView: UITableView = {
@@ -83,6 +85,10 @@ extension ViewController: UITableViewDelegate {
             viewController = SimpleGraphViewController()
         case .scrollableGraph:
             viewController = ScrollableGraphViewController()
+        case .dataSourceGraph:
+            viewController = GraphWithDataSourceViewController()
+        case .functionGraph:
+            viewController = FunctionGraphViewController()
         }
         
         navigationController?.pushViewController(viewController, animated: true)
