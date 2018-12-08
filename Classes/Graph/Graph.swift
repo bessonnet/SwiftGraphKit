@@ -92,7 +92,6 @@ public class Graph: CALayer, CALayerDelegate {
         if dataSource != nil {
             fetchRequiredPointsWithDataSource(in: graphView, between: min, to: max)
         } else if function != nil {
-            print("here")
             fetchRequiredPointsWithFunction(in: graphView, between: min, to: max)
         }
     }

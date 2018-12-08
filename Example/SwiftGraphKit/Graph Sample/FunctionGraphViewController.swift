@@ -19,12 +19,11 @@ class FunctionGraphViewController: UIViewController {
     
     private lazy var graph: BezierGraph = {
         let function: Function = { x in
-            guard x != 0 else { return nil }
-            
-            return 1 / x
+            return pow(x, 3) - 2 * pow(x, 2)
         }
         
         let defaultPoint = GraphPoint(x: 0, y: 0)
+        defaultPoint.color = .clear
         
         let graph = BezierGraph(function: function, step: 0.1, defaultPoint: defaultPoint)
         graph.color     = .darkGray
@@ -63,9 +62,7 @@ class FunctionGraphViewController: UIViewController {
     // MARK: - Configure Graph
     
     private func configureGraphView() {
-        let minX = 0
-        let maxX = 10
-        let dataFrame = CGRect(x: minX, y: -2, width: maxX - minX, height: 14)
+        let dataFrame = CGRect(x: -4, y: -4, width: 8, height: 8)
         
         // Add decoration
         

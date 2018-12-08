@@ -13,6 +13,8 @@ public class GraphPoint: CALayer, CALayerDelegate {
     public var y: CGFloat
     public var selected: Bool = false
     
+    public var color: UIColor = .blue
+    
     var min: CGFloat {
         return y
     }
@@ -58,7 +60,7 @@ public class GraphPoint: CALayer, CALayerDelegate {
         
         let path = UIBezierPath(ovalIn: CGRect(x: -2, y: -2, width: 4, height: 4))
         shapeLayer.path = path.cgPath
-        shapeLayer.fillColor = UIColor.blue.cgColor
+        shapeLayer.fillColor = color.cgColor
     }
     
     
@@ -78,6 +80,7 @@ public class GraphPoint: CALayer, CALayerDelegate {
 extension GraphPoint: NSCopying {
     public func copy(with zone: NSZone? = nil) -> Any {
         let copy = GraphPoint(x: x, y: y)
+        copy.color = color
         return copy
     }
 }
