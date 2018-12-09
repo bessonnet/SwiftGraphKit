@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SwiftGraphKit'
-  s.version          = '0.1.1'
+  s.version          = '0.1.2'
   s.swift_version    = '4.2'
   s.summary          = 'SwiftGraphKit is a framework to draw scrollable graph on your app.'
 
