@@ -69,7 +69,7 @@ graph.addData(data: points)
 
 ### Result
 
-![Build Platform](images/line-graph.png)
+![Build Platform](Images/graph.png)
 
 ## DataFrame
 

@@ -8,7 +8,7 @@
 
 import UIKit
 
-public protocol BKGraphDataSource: class {
+public protocol GraphDataSource: class {
     func graph(graph: Graph, requestDataBetween minX: CGFloat, maxX: CGFloat, completion: @escaping (([GraphPoint]) -> (Void)))
 }
 
@@ -17,7 +17,7 @@ public class Graph: CALayer, CALayerDelegate {
     /// points of graphs
     public var points: [GraphPoint] = []
     /// data source of graph, it's optional. If data is now accesible now you can use to have dynamic
-    public weak var dataSource: BKGraphDataSource?
+    public weak var dataSource: GraphDataSource?
     
     var function: Function?
     var basePoint: GraphPoint?

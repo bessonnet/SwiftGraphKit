@@ -21,6 +21,7 @@ class GraphWithDataSourceViewController: UIViewController {
         let graph = BezierGraph()
         graph.color     = .darkGray
         graph.thickness = 3.0
+        graph.dataSource = self
         return graph
     }()
     
@@ -55,21 +56,8 @@ class GraphWithDataSourceViewController: UIViewController {
     // MARK: - Configure Graph
     
     private func configureGraphView() {
-        let minX = 0
-        let maxX = 10
-        let dataFrame = CGRect(x: minX, y: -2, width: maxX - minX, height: 14)
-        
-        // configure graph
-        
-        var points = [GraphPoint]()
-        
-        for x in minX..<maxX {
-            let y = Float.random(in: -10.0..<10.0)
-            let roundedPoint = RoundedPoint(x: CGFloat(x), y: CGFloat(y))
-            points.append(roundedPoint)
-        }
-        
-        graph.addData(data: points)
+        let dataFrame = CGRect(x: 0, y: -2, width: 10, height: 14)
+        let dataArea  = CGRect(x: -20, y: -2, width: 30, height: 14)
         
         // Add decoration
         
@@ -80,6 +68,21 @@ class GraphWithDataSourceViewController: UIViewController {
         // Configure Graph View
         
         graphView.add(graph: graph)
-        graphView.configure(dataFrame: dataFrame, dataArea: dataFrame)
+        graphView.configure(dataFrame: dataFrame, dataArea: dataArea)
+    }
+}
+
+extension GraphWithDataSourceViewController: GraphDataSource {
+    
+    func graph(graph: Graph, requestDataBetween minX: CGFloat, maxX: CGFloat, completion: @escaping (([GraphPoint]) -> (Void))) {
+        
+        var points = [RoundedPoint]()
+        for x in Int(minX)..<Int(maxX) {
+            let y = Float.random(in: -10.0..<10.0)
+            let roundedPoint = RoundedPoint(x: CGFloat(x), y: CGFloat(y))
+            points.append(roundedPoint)
+        }
+        
+        completion(points)
     }
 }
