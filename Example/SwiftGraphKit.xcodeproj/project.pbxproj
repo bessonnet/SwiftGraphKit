@@ -95,7 +95,8 @@
 			children = (
 				567C6DC6219CC32000DA7E54 /* graph.png */,
 			);
-			path = Images;
+			name = Images;
+			path = ../Images;
 			sourceTree = "<group>";
 		};
 		56BDED6C219A1C66005C552B /* Graph Sample */ = {
