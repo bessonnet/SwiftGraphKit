@@ -75,7 +75,9 @@ graph.addData(data: points)
 
 ### Concept
 
-DataFrame is a core concept of framework. You will not use frame, or pixel to draw, but a custom unit on x and y.
+DataFrame is a core concept of framework. GraphView need to be positioned as all UIView.
+But inside of framework, you will not use frame, or pixel to draw, but a custom unit on x and y.
+This units are configured by data frame.
 
 ```swift
 let minX: CGFloat = 0
@@ -91,7 +93,11 @@ If you don't know your minY or maxY due to you use a dataSource on GraphView, yo
 
 ### DataArea
 
-As you can see on some sample, you can deplace on graph by scrolling and zooming. Limit on graph is base on dataArea.
+As you can see on some sample, you can deplace on graph by scrolling and zooming. Limit of graph is base on data area. So data frame will be contains on data area.
+
+![Build Platform](Images/dataFrame.png)
+
+This schema present position of data area, data frame & frame.
 
 ## Advanced Usage
 

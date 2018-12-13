@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		566B45CE21C2C0F300F2EBD6 /* dataFrame.png in Resources */ = {isa = PBXBuildFile; fileRef = 566B45CD21C2C0F300F2EBD6 /* dataFrame.png */; };
 		566CA74321BC2D28004E4990 /* GraphWithDataSourceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566CA74221BC2D28004E4990 /* GraphWithDataSourceViewController.swift */; };
 		566CA74521BC2D39004E4990 /* FunctionGraphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566CA74421BC2D39004E4990 /* FunctionGraphViewController.swift */; };
 		567C6DC7219CC32000DA7E54 /* graph.png in Resources */ = {isa = PBXBuildFile; fileRef = 567C6DC6219CC32000DA7E54 /* graph.png */; };
@@ -38,6 +39,7 @@
 		4253923AA35353C00BBD70E1 /* Pods_SwiftGraphKit_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftGraphKit_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CF4139275787495D808D730 /* Pods_SwiftGraphKit_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftGraphKit_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FC79160283D2F2143C1B727 /* SwiftGraphKit.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = SwiftGraphKit.podspec; path = ../SwiftGraphKit.podspec; sourceTree = "<group>"; };
+		566B45CD21C2C0F300F2EBD6 /* dataFrame.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dataFrame.png; sourceTree = "<group>"; };
 		566CA74221BC2D28004E4990 /* GraphWithDataSourceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphWithDataSourceViewController.swift; sourceTree = "<group>"; };
 		566CA74421BC2D39004E4990 /* FunctionGraphViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunctionGraphViewController.swift; sourceTree = "<group>"; };
 		567C6DC6219CC32000DA7E54 /* graph.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = graph.png; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 		567C6DC5219CC2F000DA7E54 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				566B45CD21C2C0F300F2EBD6 /* dataFrame.png */,
 				567C6DC6219CC32000DA7E54 /* graph.png */,
 			);
 			name = Images;
@@ -283,6 +286,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				566B45CE21C2C0F300F2EBD6 /* dataFrame.png in Resources */,
 				567C6DC7219CC32000DA7E54 /* graph.png in Resources */,
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
