@@ -1,9 +1,8 @@
 //
 //  RoundedBar.swift
-//  BKGraphKit
+//  SwiftGraphKit
 //
-//  Created by Charles Bessonnet on 01/08/2018.
-//  Copyright © 2018 Charles Bessonnet. All rights reserved.
+//  Created by Charles Bessonnet on 13/12/2018.
 //
 
 import UIKit
@@ -12,13 +11,10 @@ public class RoundedBar: GraphPoint {
     public var minY: CGFloat
     public var maxY: CGFloat
     
-    public var width: CGFloat = 10
+    public var width: CGFloat   = 10
+    public var radius: CGFloat  = 2
     
-    public var topColor    = UIColor.green
-    public var bottomColor = UIColor.red
-    
-    var topBar      = CAShapeLayer()
-    var bottomBar   = CAShapeLayer()
+    var bar = CAShapeLayer()
     
     override var min: CGFloat {
         return minY
@@ -33,8 +29,7 @@ public class RoundedBar: GraphPoint {
         
         super.init(x: x, y: 0)
         
-        self.topBar.delegate    = self
-        self.bottomBar.delegate = self
+        self.bar.delegate = self
     }
     
     public required init?(coder aDecoder: NSCoder) {
@@ -42,70 +37,23 @@ public class RoundedBar: GraphPoint {
     }
     
     public override func drawPoint(in graphView: DrawerView) {
-        self.drawTopBar(in: graphView)
-        self.drawBottomBar(in: graphView)
-    }
-    
-    func drawTopBar(in graphView: DrawerView) {
-        guard self.maxY > 0 else { return }
         
-        let bottom = graphView.convertPoint(from: CGPoint(x: self.x, y: 0))
+        let bottom = graphView.convertPoint(from: CGPoint(x: self.x, y: self.minY))
         let top    = graphView.convertPoint(from: CGPoint(x: self.x, y: self.maxY))
         
-        let path = UIBezierPath()
+        let y       = top.y
+        let x       = bottom.x - width/2
+        let height  = bottom.y - top.y
         
-        // draw arc of circle
+        let rect = CGRect(x: x, y: y, width: width, height: height)
         
-        let center = CGPoint(x: top.x, y: top.y - self.width/2)
-        path.addArc(withCenter: center, radius: self.width/2, startAngle: 0, endAngle: .pi, clockwise: false)
+        let path = UIBezierPath(roundedRect: rect, cornerRadius: radius)
         
-        // draw rect
+        self.bar.path = path.cgPath
+        self.bar.fillColor = color.cgColor
         
-        let b1 = CGPoint(x: bottom.x - self.width/2, y: bottom.y)
-        let b2 = CGPoint(x: bottom.x + self.width/2, y: bottom.y)
-        path.addLine(to: b1)
-        path.addLine(to: b2)
-        
-        let t2 = CGPoint(x: top.x + self.width/2, y: top.y - self.width/2)
-        path.addLine(to: t2)
-        
-        self.topBar.path = path.cgPath
-        self.topBar.fillColor = self.topColor.cgColor
-
-        if self.topBar.superlayer == nil {
-            self.shapeLayer.addSublayer(self.topBar)
-        }
-    }
-    
-    func drawBottomBar(in graphView: DrawerView) {
-        guard self.minY < 0 else { return }
-        
-        let bottom = graphView.convertPoint(from: CGPoint(x: self.x, y: 0))
-        let top    = graphView.convertPoint(from: CGPoint(x: self.x, y: self.minY))
-        
-        let path = UIBezierPath()
-        
-        // draw arc of circle
-        
-        let center = CGPoint(x: top.x, y: top.y - self.width/2)
-        path.addArc(withCenter: center, radius: self.width/2, startAngle: .pi, endAngle: 2 * .pi, clockwise: false)
-        
-        // draw rect
-        
-        let b1 = CGPoint(x: bottom.x - self.width/2, y: bottom.y)
-        let b2 = CGPoint(x: bottom.x + self.width/2, y: bottom.y)
-        
-        path.addLine(to: b2)
-        path.addLine(to: b1)
-        
-        let t1 = CGPoint(x: top.x - self.width/2, y: top.y - self.width/2)
-        path.addLine(to: t1)
-        
-        self.bottomBar.path = path.cgPath
-        self.bottomBar.fillColor = self.bottomColor.cgColor
-        
-        if self.bottomBar.superlayer == nil {
-            self.shapeLayer.addSublayer(self.bottomBar)
+        if self.bar.superlayer == nil {
+            self.shapeLayer.addSublayer(self.bar)
         }
     }
 }

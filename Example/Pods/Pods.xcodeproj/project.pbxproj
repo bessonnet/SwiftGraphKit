@@ -27,7 +27,7 @@
 		56E8985721983D7B006D1C3E /* HorizontalLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E8984B21983AD7006D1C3E /* HorizontalLine.swift */; };
 		56E8985821983D7F006D1C3E /* VerticalLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E8984A21983AD7006D1C3E /* VerticalLine.swift */; };
 		56E8985921983D85006D1C3E /* GraphPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E8984121983AA3006D1C3E /* GraphPoint.swift */; };
-		56E8985A21983D85006D1C3E /* RoundedBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E8984221983AA3006D1C3E /* RoundedBar.swift */; };
+		56E8985A21983D85006D1C3E /* DualRoundedBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E8984221983AA3006D1C3E /* DualRoundedBar.swift */; };
 		56E8985B21983D85006D1C3E /* RoundedPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E8984321983AA3006D1C3E /* RoundedPoint.swift */; };
 		56E8985C21983D85006D1C3E /* BezierGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E8983721983A8B006D1C3E /* BezierGraph.swift */; };
 		56E8985D21983D85006D1C3E /* BezierGraph+Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E8983921983A8B006D1C3E /* BezierGraph+Gradient.swift */; };
@@ -47,6 +47,7 @@
 		56E8986B21983D9C006D1C3E /* DrawerView+Layer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E8982A21983A1A006D1C3E /* DrawerView+Layer.swift */; };
 		56E89872219841E1006D1C3E /* GraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E89870219841E1006D1C3E /* GraphView.swift */; };
 		56E89875219841E9006D1C3E /* LayerZPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E89873219841E9006D1C3E /* LayerZPosition.swift */; };
+		56EFDA2621C28E9A00DF4B83 /* RoundedBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56EFDA2521C28E9A00DF4B83 /* RoundedBar.swift */; };
 		59FD5FAEFCF13CD39358A6F36C50BED8 /* FBSnapshotTestController.h in Headers */ = {isa = PBXBuildFile; fileRef = 1374B79237CAC07693E99442FBED1F15 /* FBSnapshotTestController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		63EA4B9CBBAB30A69C2D73693019FDC5 /* UIImage+Compare.h in Headers */ = {isa = PBXBuildFile; fileRef = 432938111B6FF0189EFFEDF2F845B308 /* UIImage+Compare.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		6B71ACB6D56B970D0B2AD8EE2B79D96F /* FBSnapshotTestCasePlatform.m in Sources */ = {isa = PBXBuildFile; fileRef = 58A2557E7CE20AACCD1B28B1CD1F920D /* FBSnapshotTestCasePlatform.m */; };
@@ -134,7 +135,7 @@
 		56E8983921983A8B006D1C3E /* BezierGraph+Gradient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "BezierGraph+Gradient.swift"; sourceTree = "<group>"; };
 		56E8983A21983A8B006D1C3E /* Graph.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Graph.swift; sourceTree = "<group>"; };
 		56E8984121983AA3006D1C3E /* GraphPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphPoint.swift; sourceTree = "<group>"; };
-		56E8984221983AA3006D1C3E /* RoundedBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedBar.swift; sourceTree = "<group>"; };
+		56E8984221983AA3006D1C3E /* DualRoundedBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DualRoundedBar.swift; sourceTree = "<group>"; };
 		56E8984321983AA3006D1C3E /* RoundedPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedPoint.swift; sourceTree = "<group>"; };
 		56E8984921983AD7006D1C3E /* Grid+AutoResize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Grid+AutoResize.swift"; sourceTree = "<group>"; };
 		56E8984A21983AD7006D1C3E /* VerticalLine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerticalLine.swift; sourceTree = "<group>"; };
@@ -143,6 +144,7 @@
 		56E8985121983AE5006D1C3E /* LayerPool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayerPool.swift; sourceTree = "<group>"; };
 		56E89870219841E1006D1C3E /* GraphView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphView.swift; sourceTree = "<group>"; };
 		56E89873219841E9006D1C3E /* LayerZPosition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayerZPosition.swift; sourceTree = "<group>"; };
+		56EFDA2521C28E9A00DF4B83 /* RoundedBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedBar.swift; sourceTree = "<group>"; };
 		58A2557E7CE20AACCD1B28B1CD1F920D /* FBSnapshotTestCasePlatform.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSnapshotTestCasePlatform.m; path = FBSnapshotTestCase/FBSnapshotTestCasePlatform.m; sourceTree = "<group>"; };
 		67E276593855381568F725E69496F29C /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6F3348D2E1ED4758EC37C0CC5B9C502A /* SwiftGraphKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftGraphKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -381,7 +383,8 @@
 			isa = PBXGroup;
 			children = (
 				56E8984121983AA3006D1C3E /* GraphPoint.swift */,
-				56E8984221983AA3006D1C3E /* RoundedBar.swift */,
+				56EFDA2521C28E9A00DF4B83 /* RoundedBar.swift */,
+				56E8984221983AA3006D1C3E /* DualRoundedBar.swift */,
 				56E8984321983AA3006D1C3E /* RoundedPoint.swift */,
 			);
 			path = Point;
@@ -743,7 +746,7 @@
 				56E8986721983D9C006D1C3E /* DrawerView.swift in Sources */,
 				56E8985621983D78006D1C3E /* Grid+AutoResize.swift in Sources */,
 				56E89875219841E9006D1C3E /* LayerZPosition.swift in Sources */,
-				56E8985A21983D85006D1C3E /* RoundedBar.swift in Sources */,
+				56E8985A21983D85006D1C3E /* DualRoundedBar.swift in Sources */,
 				56E8986421983D98006D1C3E /* VerticalAxis.swift in Sources */,
 				56E8986021983D85006D1C3E /* Graph.swift in Sources */,
 				56E8986921983D9C006D1C3E /* DrawerView+Convert.swift in Sources */,
@@ -765,6 +768,7 @@
 				56E8986821983D9C006D1C3E /* DrawerView+Autoresize.swift in Sources */,
 				56E8985F21983D85006D1C3E /* CGPoint+Norm.swift in Sources */,
 				56E8985D21983D85006D1C3E /* BezierGraph+Gradient.swift in Sources */,
+				56EFDA2621C28E9A00DF4B83 /* RoundedBar.swift in Sources */,
 				56E8985721983D7B006D1C3E /* HorizontalLine.swift in Sources */,
 				56E8985821983D7F006D1C3E /* VerticalLine.swift in Sources */,
 				566CA73E21BBDF84004E4990 /* Graph+Function.swift in Sources */,

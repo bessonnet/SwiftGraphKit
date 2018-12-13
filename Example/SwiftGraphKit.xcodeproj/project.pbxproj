@@ -12,6 +12,7 @@
 		567C6DC7219CC32000DA7E54 /* graph.png in Resources */ = {isa = PBXBuildFile; fileRef = 567C6DC6219CC32000DA7E54 /* graph.png */; };
 		56BDED6E219A1CB7005C552B /* SimpleGraphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56BDED6D219A1CB7005C552B /* SimpleGraphViewController.swift */; };
 		56BDED70219A1D52005C552B /* ScrollableGraphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56BDED6F219A1D52005C552B /* ScrollableGraphViewController.swift */; };
+		56EFDA2821C2935300DF4B83 /* SimpleBarGraphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56EFDA2721C2935300DF4B83 /* SimpleBarGraphViewController.swift */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
@@ -42,6 +43,7 @@
 		567C6DC6219CC32000DA7E54 /* graph.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = graph.png; sourceTree = "<group>"; };
 		56BDED6D219A1CB7005C552B /* SimpleGraphViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleGraphViewController.swift; sourceTree = "<group>"; };
 		56BDED6F219A1D52005C552B /* ScrollableGraphViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollableGraphViewController.swift; sourceTree = "<group>"; };
+		56EFDA2721C2935300DF4B83 /* SimpleBarGraphViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleBarGraphViewController.swift; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* SwiftGraphKit_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftGraphKit_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 				56BDED6F219A1D52005C552B /* ScrollableGraphViewController.swift */,
 				566CA74221BC2D28004E4990 /* GraphWithDataSourceViewController.swift */,
 				566CA74421BC2D39004E4990 /* FunctionGraphViewController.swift */,
+				56EFDA2721C2935300DF4B83 /* SimpleBarGraphViewController.swift */,
 			);
 			path = "Graph Sample";
 			sourceTree = "<group>";
@@ -393,6 +396,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				56BDED6E219A1CB7005C552B /* SimpleGraphViewController.swift in Sources */,
+				56EFDA2821C2935300DF4B83 /* SimpleBarGraphViewController.swift in Sources */,
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				566CA74321BC2D28004E4990 /* GraphWithDataSourceViewController.swift in Sources */,
 				566CA74521BC2D39004E4990 /* FunctionGraphViewController.swift in Sources */,

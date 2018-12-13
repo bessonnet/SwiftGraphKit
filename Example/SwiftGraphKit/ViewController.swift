@@ -17,6 +17,7 @@ class ViewController: UIViewController {
         case scrollableGraph    = "Scrollable Graph"
         case dataSourceGraph    = "Graph with dataSource"
         case functionGraph      = "Graph with function"
+        case simpleBarGraph     = "Simple bar graph"
     }
     
     private lazy var tableView: UITableView = {
@@ -89,6 +90,8 @@ extension ViewController: UITableViewDelegate {
             viewController = GraphWithDataSourceViewController()
         case .functionGraph:
             viewController = FunctionGraphViewController()
+        case .simpleBarGraph:
+            viewController = SimpleBarGraphViewController()
         }
         
         navigationController?.pushViewController(viewController, animated: true)
