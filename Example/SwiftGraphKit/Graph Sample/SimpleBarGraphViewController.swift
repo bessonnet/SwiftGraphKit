@@ -79,9 +79,23 @@ class SimpleBarGraphViewController: UIViewController {
         grid.color = .lightGray
         graphView.set(grid: grid)
         
+        let horizontalAxis = HorizontalAxis(step: 1.0, position: .bottomOutside)
+        horizontalAxis.axisDelegate = self
+        graphView.set(horizontalAxis: horizontalAxis)
+        
         // Configure Graph View
         
         graphView.add(graph: graph)
         graphView.configure(dataFrame: dataFrame, dataArea: dataFrame)
+    }
+}
+
+extension SimpleBarGraphViewController: AxisDelegate {
+    func needStringValue(for axis: Axis, at index: CGFloat) -> String {
+        let i = Int(index)
+        guard i >= 0, i <= 6 else { return "" }
+        
+        let weekdays = ["S", "M", "T", "W", "T", "F", "S"]
+        return weekdays[i]
     }
 }
