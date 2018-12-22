@@ -13,6 +13,8 @@ import SwiftGraphKit
 class ViewController: UIViewController {
     
     enum GraphSample: String, CaseIterable {
+        case complexeGraph      = "Sample Demo"
+        
         case simpleGraph        = "Simple Graph"
         case scrollableGraph    = "Scrollable Graph"
         case dataSourceGraph    = "Graph with dataSource"
@@ -92,6 +94,8 @@ extension ViewController: UITableViewDelegate {
             viewController = FunctionGraphViewController()
         case .simpleBarGraph:
             viewController = SimpleBarGraphViewController()
+        case .complexeGraph:
+            viewController = ComplexeGraphViewController()
         }
         
         navigationController?.pushViewController(viewController, animated: true)
