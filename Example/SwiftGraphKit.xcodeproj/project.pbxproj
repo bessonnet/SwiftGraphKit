@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		561FFFDF21CED96100CA139A /* ComplexeGraphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561FFFDE21CED96100CA139A /* ComplexeGraphViewController.swift */; };
+		565B94C221D25489004CF708 /* UIColor+ComplexeGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565B94C121D25489004CF708 /* UIColor+ComplexeGraph.swift */; };
 		566B45CE21C2C0F300F2EBD6 /* dataFrame.png in Resources */ = {isa = PBXBuildFile; fileRef = 566B45CD21C2C0F300F2EBD6 /* dataFrame.png */; };
 		566CA74321BC2D28004E4990 /* GraphWithDataSourceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566CA74221BC2D28004E4990 /* GraphWithDataSourceViewController.swift */; };
 		566CA74521BC2D39004E4990 /* FunctionGraphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566CA74421BC2D39004E4990 /* FunctionGraphViewController.swift */; };
@@ -41,6 +42,7 @@
 		4CF4139275787495D808D730 /* Pods_SwiftGraphKit_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftGraphKit_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FC79160283D2F2143C1B727 /* SwiftGraphKit.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = SwiftGraphKit.podspec; path = ../SwiftGraphKit.podspec; sourceTree = "<group>"; };
 		561FFFDE21CED96100CA139A /* ComplexeGraphViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplexeGraphViewController.swift; sourceTree = "<group>"; };
+		565B94C121D25489004CF708 /* UIColor+ComplexeGraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+ComplexeGraph.swift"; sourceTree = "<group>"; };
 		566B45CD21C2C0F300F2EBD6 /* dataFrame.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dataFrame.png; sourceTree = "<group>"; };
 		566CA74221BC2D28004E4990 /* GraphWithDataSourceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphWithDataSourceViewController.swift; sourceTree = "<group>"; };
 		566CA74421BC2D39004E4990 /* FunctionGraphViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunctionGraphViewController.swift; sourceTree = "<group>"; };
@@ -100,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				561FFFDE21CED96100CA139A /* ComplexeGraphViewController.swift */,
+				565B94C121D25489004CF708 /* UIColor+ComplexeGraph.swift */,
 			);
 			path = "Complexe Sample";
 			sourceTree = "<group>";
@@ -414,6 +417,7 @@
 				56EFDA2821C2935300DF4B83 /* SimpleBarGraphViewController.swift in Sources */,
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				566CA74321BC2D28004E4990 /* GraphWithDataSourceViewController.swift in Sources */,
+				565B94C221D25489004CF708 /* UIColor+ComplexeGraph.swift in Sources */,
 				566CA74521BC2D39004E4990 /* FunctionGraphViewController.swift in Sources */,
 				56BDED70219A1D52005C552B /* ScrollableGraphViewController.swift in Sources */,
 				561FFFDF21CED96100CA139A /* ComplexeGraphViewController.swift in Sources */,

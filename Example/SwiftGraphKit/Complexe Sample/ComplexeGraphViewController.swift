@@ -20,10 +20,10 @@ class ComplexeGraphViewController: UIViewController {
     
     private lazy var graph: BezierGraph = {
         let graph = BezierGraph()
-        graph.color         = .darkGray
-        graph.thickness     = 3.0
-        graph.gradientColors = [.blue, .clear]
         
+        graph.color         = UIColor.Graph.curve
+        graph.thickness     = 3.0
+        graph.gradientColors = [UIColor.Graph.Gradient.top, UIColor.Graph.Gradient.bot]
         graph.dataSource    = self
         
         return graph
@@ -66,7 +66,7 @@ class ComplexeGraphViewController: UIViewController {
         // Add decoration
         
         let grid = Grid(stepX: 1.0, stepY: 1.0)
-        grid.color = .lightGray
+        grid.color = UIColor.Graph.grid
         graphView.set(grid: grid)
         
         let horizontalAxis = HorizontalAxis(step: 1.0, position: .bottomOutside)
@@ -91,7 +91,14 @@ extension ComplexeGraphViewController: GraphDataSource {
         var points = [RoundedPoint]()
         for x in Int(minX)..<Int(maxX) {
             let y = Float.random(in: -10.0..<10.0)
+            
             let roundedPoint = RoundedPoint(x: CGFloat(x), y: CGFloat(y))
+            
+            roundedPoint.fillColor      = UIColor.Graph.point
+            roundedPoint.strokeColor    = .white
+            roundedPoint.radius     = 5
+            roundedPoint.thickness  = 3
+            
             points.append(roundedPoint)
         }
         
