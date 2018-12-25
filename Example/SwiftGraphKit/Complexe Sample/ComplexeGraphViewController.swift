@@ -10,6 +10,8 @@ import UIKit
 import SwiftGraphKit
 
 class ComplexeGraphViewController: UIViewController {
+    
+    private var model = DataModel()
 
     private lazy var graphView: GraphView = {
         let graphView = GraphView()
@@ -59,13 +61,14 @@ class ComplexeGraphViewController: UIViewController {
     // MARK: - Configure Graph
     
     private func configureGraphView() {
-        
-        let dataFrame = CGRect(x: 0, y: -2, width: 10, height: 14)
-        let dataArea  = CGRect(x: -20, y: -2, width: 30, height: 14)
+        let width: CGFloat = 7
+        let x: CGFloat = CGFloat(model.reports.count + 1) - width
+        let dataFrame = CGRect(x: x, y: 0, width: 7, height: 1000)
+        let dataArea  = CGRect(x: 0, y: 0, width: model.reports.count + 1, height: 1000)
         
         // Add decoration
         
-        let grid = Grid(stepX: 1.0, stepY: 1.0)
+        let grid = Grid(stepX: 1.0, stepY: 1000)
         grid.color = UIColor.Graph.grid
         graphView.set(grid: grid)
         
@@ -73,7 +76,7 @@ class ComplexeGraphViewController: UIViewController {
         horizontalAxis.axisDelegate = self
         graphView.set(horizontalAxis: horizontalAxis)
         
-        let verticalAxis = VerticalAxis(step: 1.0, position: .left)
+        let verticalAxis = VerticalAxis(step: 1000, position: .left)
         graphView.set(verticalAxis: verticalAxis)
         
         // Configure Graph View
@@ -90,19 +93,23 @@ extension ComplexeGraphViewController: GraphDataSource {
         
         var points = [RoundedPoint]()
         for x in Int(minX)..<Int(maxX) {
-            let y = Float.random(in: -10.0..<10.0)
             
-            let roundedPoint = RoundedPoint(x: CGFloat(x), y: CGFloat(y))
-            
-            roundedPoint.fillColor              = UIColor.Graph.point
-            roundedPoint.strokeColor            = .white
-            roundedPoint.selectedFillColor      = .white
-            roundedPoint.selectedStrokeColor    = UIColor.Graph.point
-            roundedPoint.radius         = 5
-            roundedPoint.selectedRadius = 6
-            roundedPoint.thickness      = 3
-            
-            points.append(roundedPoint)
+            if let report = model.report(for: x) {
+                
+                let y = report.amount
+                
+                let roundedPoint = RoundedPoint(x: CGFloat(x), y: CGFloat(y))
+                
+                roundedPoint.fillColor              = UIColor.Graph.point
+                roundedPoint.strokeColor            = .white
+                roundedPoint.selectedFillColor      = .white
+                roundedPoint.selectedStrokeColor    = UIColor.Graph.point
+                roundedPoint.radius         = 5
+                roundedPoint.selectedRadius = 6
+                roundedPoint.thickness      = 3
+                
+                points.append(roundedPoint)
+            }
         }
         
         completion(points)
