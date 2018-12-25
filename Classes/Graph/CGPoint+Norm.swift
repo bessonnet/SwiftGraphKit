@@ -20,7 +20,7 @@ extension CGPoint {
         switch norm {
         case .quadratic:
             guard let frame = dataFrame else { return 0 }
-            // using formula of normalize distance to avoid strange case of use (due to huge varation on one axis)
+            // using formula of normalize distance to avoid case of use (due to huge varation on one axis)
             let dx = (self.x - point.x) / frame.width
             let dy = (self.y - point.y) / frame.height
             let distance = dx * dx + dy * dy

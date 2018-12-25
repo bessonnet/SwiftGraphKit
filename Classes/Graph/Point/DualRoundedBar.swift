@@ -17,15 +17,11 @@ public class DualRoundedBar: GraphPoint {
     public var topColor    = UIColor.green
     public var bottomColor = UIColor.red
     
-    var topBar      = CAShapeLayer()
-    var bottomBar   = CAShapeLayer()
+    private var topBar      = CAShapeLayer()
+    private var bottomBar   = CAShapeLayer()
     
-    override var min: CGFloat {
-        return minY
-    }
-    override var max: CGFloat {
-        return maxY
-    }
+    override var min: CGFloat { return minY }
+    override var max: CGFloat { return maxY }
     
     public init(x: CGFloat, minY: CGFloat, maxY: CGFloat) {
         self.minY = minY
@@ -42,11 +38,11 @@ public class DualRoundedBar: GraphPoint {
     }
     
     public override func drawPoint(in graphView: DrawerView) {
-        self.drawTopBar(in: graphView)
-        self.drawBottomBar(in: graphView)
+        drawTopBar(in: graphView)
+        drawBottomBar(in: graphView)
     }
     
-    func drawTopBar(in graphView: DrawerView) {
+    private func drawTopBar(in graphView: DrawerView) {
         guard self.maxY > 0 else { return }
         
         let bottom = graphView.convertPoint(from: CGPoint(x: self.x, y: 0))
@@ -69,15 +65,15 @@ public class DualRoundedBar: GraphPoint {
         let t2 = CGPoint(x: top.x + self.width/2, y: top.y - self.width/2)
         path.addLine(to: t2)
         
-        self.topBar.path = path.cgPath
-        self.topBar.fillColor = self.topColor.cgColor
+        topBar.path = path.cgPath
+        topBar.fillColor = self.topColor.cgColor
 
-        if self.topBar.superlayer == nil {
-            self.shapeLayer.addSublayer(self.topBar)
+        if topBar.superlayer == nil {
+            shapeLayer.addSublayer(topBar)
         }
     }
     
-    func drawBottomBar(in graphView: DrawerView) {
+    private func drawBottomBar(in graphView: DrawerView) {
         guard self.minY < 0 else { return }
         
         let bottom = graphView.convertPoint(from: CGPoint(x: self.x, y: 0))
@@ -101,11 +97,11 @@ public class DualRoundedBar: GraphPoint {
         let t1 = CGPoint(x: top.x - self.width/2, y: top.y - self.width/2)
         path.addLine(to: t1)
         
-        self.bottomBar.path = path.cgPath
-        self.bottomBar.fillColor = self.bottomColor.cgColor
+        bottomBar.path = path.cgPath
+        bottomBar.fillColor = bottomColor.cgColor
         
-        if self.bottomBar.superlayer == nil {
-            self.shapeLayer.addSublayer(self.bottomBar)
+        if bottomBar.superlayer == nil {
+            shapeLayer.addSublayer(bottomBar)
         }
     }
 }

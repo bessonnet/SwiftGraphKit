@@ -94,10 +94,13 @@ extension ComplexeGraphViewController: GraphDataSource {
             
             let roundedPoint = RoundedPoint(x: CGFloat(x), y: CGFloat(y))
             
-            roundedPoint.fillColor      = UIColor.Graph.point
-            roundedPoint.strokeColor    = .white
-            roundedPoint.radius     = 5
-            roundedPoint.thickness  = 3
+            roundedPoint.fillColor              = UIColor.Graph.point
+            roundedPoint.strokeColor            = .white
+            roundedPoint.selectedFillColor      = .white
+            roundedPoint.selectedStrokeColor    = UIColor.Graph.point
+            roundedPoint.radius         = 5
+            roundedPoint.selectedRadius = 6
+            roundedPoint.thickness      = 3
             
             points.append(roundedPoint)
         }

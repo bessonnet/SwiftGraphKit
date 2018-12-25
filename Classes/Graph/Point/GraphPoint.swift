@@ -36,9 +36,9 @@ public class GraphPoint: CALayer, CALayerDelegate {
         
         super.init()
         
-        self.addSublayer(self.shapeLayer)
-        self.shapeLayer.delegate = self
-        self.delegate = self
+        addSublayer(shapeLayer)
+        shapeLayer.delegate = self
+        delegate = self
     }
     
     public required init?(coder aDecoder: NSCoder) {
@@ -46,8 +46,8 @@ public class GraphPoint: CALayer, CALayerDelegate {
     }
     
     public override init(layer: Any) {
-        self.x = 0
-        self.y = 0
+        x = 0
+        y = 0
         
         super.init(layer: layer)
     }

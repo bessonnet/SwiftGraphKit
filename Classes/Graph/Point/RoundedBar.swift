@@ -14,7 +14,7 @@ public class RoundedBar: GraphPoint {
     public var width: CGFloat   = 10
     public var radius: CGFloat  = 2
     
-    var bar = CAShapeLayer()
+    private var bar = CAShapeLayer()
     
     override var min: CGFloat {
         return minY
@@ -49,11 +49,11 @@ public class RoundedBar: GraphPoint {
         
         let path = UIBezierPath(roundedRect: rect, cornerRadius: radius)
         
-        self.bar.path = path.cgPath
-        self.bar.fillColor = color.cgColor
+        bar.path = path.cgPath
+        bar.fillColor = color.cgColor
         
-        if self.bar.superlayer == nil {
-            self.shapeLayer.addSublayer(self.bar)
+        if bar.superlayer == nil {
+            shapeLayer.addSublayer(self.bar)
         }
     }
 }
