@@ -10,6 +10,11 @@ import UIKit
 
 public class BreakLineGraph: Graph {
     public var color: UIColor = UIColor.blue.withAlphaComponent(0.4)
+    public var gradientColors: [UIColor]? = nil {
+        didSet {
+            self.gradientLayer.colors = gradientColors?.compactMap({ $0.cgColor })
+        }
+    }
     public var thickness: CGFloat = 3.0
     
     private var breakLineShape: CAShapeLayer = {
@@ -17,19 +22,26 @@ public class BreakLineGraph: Graph {
         layer.fillColor = UIColor.clear.cgColor
         return layer
     }()
+
+    var gradientLayer: CAGradientLayer = {
+        let gradientLayer = CAGradientLayer()
+        return gradientLayer
+    }()
     
     // MARK: - Init
     
     public override init() {
         super.init()
         
-        self.breakLineShape.delegate = self
+        breakLineShape.delegate = self
+        gradientLayer.delegate  = self
     }
     
     public override init(function: @escaping Function, step: CGFloat, defaultPoint: GraphPoint) {
         super.init(function: function, step: step, defaultPoint: defaultPoint)
         
-        self.breakLineShape.delegate = self
+        breakLineShape.delegate = self
+        gradientLayer.delegate  = self
     }
     
     public required init?(coder aDecoder: NSCoder) {
@@ -46,15 +58,15 @@ public class BreakLineGraph: Graph {
     }
     
     private func drawBreakLine(in graphView: DrawerView) {
-        let curvePoints = self.needPoints(in: graphView)
-        guard let firstPoint = curvePoints.first else { return }
+        let curvePoints = self.needPoints(in: graphView)        
+        let points = curvePoints.compactMap({ graphView.convertPoint(from: $0.point) })
+        guard let firstPoint = points.first else { return }
         
         let path = UIBezierPath()
-        path.move(to: graphView.convertPoint(from: firstPoint.point))
+        path.move(to: firstPoint)
         
         for i in 1..<curvePoints.count {
-            let point = curvePoints[i]
-            path.addLine(to: graphView.convertPoint(from: point.point))
+            path.addLine(to: points[i])
         }
         
         self.breakLineShape.lineWidth   = self.thickness
@@ -62,6 +74,19 @@ public class BreakLineGraph: Graph {
         
         self.breakLineShape.path = path.cgPath
         self.addSublayer(self.breakLineShape)
+        
+        // Draw gradient
+        if self.gradientColors != nil {
+            let maskPath = path
+            if let minX = points.first?.x, let maxX = points.last?.x {
+                let minY = graphView.bounds.height
+                maskPath.addLine(to: CGPoint(x: maxX, y: minY))
+                maskPath.addLine(to: CGPoint(x: minX, y: minY))
+                maskPath.addLine(to: firstPoint)
+            }
+            
+            self.drawGradientBackground(path: maskPath, in: graphView)
+        }
     }
     
     func needPoints(in graphView: DrawerView) -> [GraphPoint] {

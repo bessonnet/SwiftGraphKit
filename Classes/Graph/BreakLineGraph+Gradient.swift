@@ -9,13 +9,13 @@ import UIKit
 
 extension BreakLineGraph {
 
-//    func drawGradientBackground(path: UIBezierPath, in graphView: DrawerView) {
-//        let maskLayer = CAShapeLayer()
-//        maskLayer.path = path.cgPath
-//        
-//        self.gradientLayer.frame = graphView.bounds
-//        self.gradientLayer.mask = maskLayer
-//        
-//        self.insertSublayer(self.gradientLayer, at: 0)
-//    }
+    func drawGradientBackground(path: UIBezierPath, in graphView: DrawerView) {
+        let maskLayer = CAShapeLayer()
+        maskLayer.path = path.cgPath
+
+        self.gradientLayer.frame = graphView.bounds
+        self.gradientLayer.mask = maskLayer
+
+        self.insertSublayer(self.gradientLayer, at: 0)
+    }
 }
