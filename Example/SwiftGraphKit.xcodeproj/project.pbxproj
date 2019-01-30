@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		561FFFDF21CED96100CA139A /* ComplexeGraphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561FFFDE21CED96100CA139A /* ComplexeGraphViewController.swift */; };
 		5631D18021D2837B00C6EBDC /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5631D17F21D2837B00C6EBDC /* DataModel.swift */; };
+		563FC6C322023EF800A3CC76 /* MultipleGraphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 563FC6C222023EF800A3CC76 /* MultipleGraphViewController.swift */; };
 		565B94C221D25489004CF708 /* UIColor+ComplexeGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565B94C121D25489004CF708 /* UIColor+ComplexeGraph.swift */; };
 		566B45CE21C2C0F300F2EBD6 /* dataFrame.png in Resources */ = {isa = PBXBuildFile; fileRef = 566B45CD21C2C0F300F2EBD6 /* dataFrame.png */; };
 		566CA74321BC2D28004E4990 /* GraphWithDataSourceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566CA74221BC2D28004E4990 /* GraphWithDataSourceViewController.swift */; };
@@ -44,6 +45,7 @@
 		4FC79160283D2F2143C1B727 /* SwiftGraphKit.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = SwiftGraphKit.podspec; path = ../SwiftGraphKit.podspec; sourceTree = "<group>"; };
 		561FFFDE21CED96100CA139A /* ComplexeGraphViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplexeGraphViewController.swift; sourceTree = "<group>"; };
 		5631D17F21D2837B00C6EBDC /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
+		563FC6C222023EF800A3CC76 /* MultipleGraphViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipleGraphViewController.swift; sourceTree = "<group>"; };
 		565B94C121D25489004CF708 /* UIColor+ComplexeGraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+ComplexeGraph.swift"; sourceTree = "<group>"; };
 		566B45CD21C2C0F300F2EBD6 /* dataFrame.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dataFrame.png; sourceTree = "<group>"; };
 		566CA74221BC2D28004E4990 /* GraphWithDataSourceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphWithDataSourceViewController.swift; sourceTree = "<group>"; };
@@ -128,6 +130,7 @@
 				566CA74221BC2D28004E4990 /* GraphWithDataSourceViewController.swift */,
 				566CA74421BC2D39004E4990 /* FunctionGraphViewController.swift */,
 				56EFDA2721C2935300DF4B83 /* SimpleBarGraphViewController.swift */,
+				563FC6C222023EF800A3CC76 /* MultipleGraphViewController.swift */,
 			);
 			path = "Graph Sample";
 			sourceTree = "<group>";
@@ -424,6 +427,7 @@
 				5631D18021D2837B00C6EBDC /* DataModel.swift in Sources */,
 				566CA74521BC2D39004E4990 /* FunctionGraphViewController.swift in Sources */,
 				56BDED70219A1D52005C552B /* ScrollableGraphViewController.swift in Sources */,
+				563FC6C322023EF800A3CC76 /* MultipleGraphViewController.swift in Sources */,
 				561FFFDF21CED96100CA139A /* ComplexeGraphViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 			);

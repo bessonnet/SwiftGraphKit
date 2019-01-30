@@ -19,6 +19,7 @@
 		4CF5865BAF828AB9A7C56F3A1B1C856F /* FBSnapshotTestCase-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A11D5B54955E3381F067364E427B571A /* FBSnapshotTestCase-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4D600539FC2E29EA7E28A2DA8A8B328C /* FBSnapshotTestCasePlatform.h in Headers */ = {isa = PBXBuildFile; fileRef = 7E3DB4D092B985E76E227F7F313C6981 /* FBSnapshotTestCasePlatform.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4F7BD484FB402A43887E35E364F04D94 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1A94602875A48A997AD3F08A33E6EAA /* Foundation.framework */; };
+		563FC6C5220248BF00A3CC76 /* BreakLineGraph+Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 563FC6C4220248BF00A3CC76 /* BreakLineGraph+Gradient.swift */; };
 		566CA73E21BBDF84004E4990 /* Graph+Function.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566CA73D21BBDF84004E4990 /* Graph+Function.swift */; };
 		566CA74121BC1105004E4990 /* CGFloat+Values.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566CA74021BC1105004E4990 /* CGFloat+Values.swift */; };
 		56E8985321983D68006D1C3E /* LayerPool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E8985121983AE5006D1C3E /* LayerPool.swift */; };
@@ -116,6 +117,7 @@
 		4792533D7EE0F440EE722DA4999E845C /* FBSnapshotTestCase-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FBSnapshotTestCase-dummy.m"; sourceTree = "<group>"; };
 		4E7483B7D543DE4DA9873415860761BA /* Pods_SwiftGraphKit_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftGraphKit_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F246C4CC8B48BD9DACD4C4F931B3775 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		563FC6C4220248BF00A3CC76 /* BreakLineGraph+Gradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BreakLineGraph+Gradient.swift"; sourceTree = "<group>"; };
 		566CA73D21BBDF84004E4990 /* Graph+Function.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Graph+Function.swift"; sourceTree = "<group>"; };
 		566CA74021BC1105004E4990 /* CGFloat+Values.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+Values.swift"; sourceTree = "<group>"; };
 		56E8981B219839A9006D1C3E /* VerticalAxis.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerticalAxis.swift; sourceTree = "<group>"; };
@@ -372,6 +374,7 @@
 				56E8983721983A8B006D1C3E /* BezierGraph.swift */,
 				56E8983921983A8B006D1C3E /* BezierGraph+Gradient.swift */,
 				56E8983821983A8B006D1C3E /* BreakLineGraph.swift */,
+				563FC6C4220248BF00A3CC76 /* BreakLineGraph+Gradient.swift */,
 				56E8983621983A8B006D1C3E /* CGPoint+Norm.swift */,
 				56E8983A21983A8B006D1C3E /* Graph.swift */,
 				566CA73D21BBDF84004E4990 /* Graph+Function.swift */,
@@ -763,6 +766,7 @@
 				56E8985B21983D85006D1C3E /* RoundedPoint.swift in Sources */,
 				56E8986B21983D9C006D1C3E /* DrawerView+Layer.swift in Sources */,
 				56E8986221983D98006D1C3E /* Axis.swift in Sources */,
+				563FC6C5220248BF00A3CC76 /* BreakLineGraph+Gradient.swift in Sources */,
 				566CA74121BC1105004E4990 /* CGFloat+Values.swift in Sources */,
 				56E89872219841E1006D1C3E /* GraphView.swift in Sources */,
 				56E8986821983D9C006D1C3E /* DrawerView+Autoresize.swift in Sources */,

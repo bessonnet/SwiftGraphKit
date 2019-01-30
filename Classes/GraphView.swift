@@ -97,6 +97,12 @@ public class GraphView: UIView {
         self.drawerView.add(graph: graph)
     }
     
+    public func add(graphs: [Graph]) {
+        for graph in graphs {
+            add(graph: graph)
+        }
+    }
+    
     public func removeAllGraphs() {
         self.graphs.removeAll()
         self.drawerView.removeAllGraphs()

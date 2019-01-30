@@ -20,6 +20,7 @@ class ViewController: UIViewController {
         case dataSourceGraph    = "Graph with dataSource"
         case functionGraph      = "Graph with function"
         case simpleBarGraph     = "Simple bar graph"
+        case multipleGraphs     = "Multiple graphs"
     }
     
     private lazy var tableView: UITableView = {
@@ -96,6 +97,8 @@ extension ViewController: UITableViewDelegate {
             viewController = SimpleBarGraphViewController()
         case .complexeGraph:
             viewController = ComplexeGraphViewController()
+        case .multipleGraphs:
+            viewController = MultipleGraphViewController()
         }
         
         navigationController?.pushViewController(viewController, animated: true)
