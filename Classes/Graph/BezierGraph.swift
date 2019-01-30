@@ -12,7 +12,7 @@ public class BezierGraph: Graph {
     public var color: UIColor = UIColor.blue.withAlphaComponent(0.4)
     public var gradientColors: [UIColor]? = nil {
         didSet {
-            self.gradientLayer.colors = gradientColors?.compactMap({ $0.cgColor })
+            gradientLayer.colors = gradientColors?.compactMap({ $0.cgColor })
         }
     }
     public var thickness: CGFloat = 3.0
@@ -33,15 +33,15 @@ public class BezierGraph: Graph {
     public override init() {
         super.init()
         
-        self.breakLineShape.delegate = self
-        self.gradientLayer.delegate  = self
+        breakLineShape.delegate = self
+        gradientLayer.delegate  = self
     }
     
     public override init(function: @escaping Function, step: CGFloat, defaultPoint: GraphPoint) {
         super.init(function: function, step: step, defaultPoint: defaultPoint)
         
-        self.breakLineShape.delegate = self
-        self.gradientLayer.delegate  = self
+        breakLineShape.delegate = self
+        gradientLayer.delegate  = self
     }
     
     public required init?(coder aDecoder: NSCoder) {
@@ -51,10 +51,10 @@ public class BezierGraph: Graph {
     // MARK: - Draw
     
     override func drawGraph(in graphView: DrawerView) {
-        self.sublayers = nil
+        sublayers = nil
         
-        self.drawCurve(in: graphView)
-        self.drawPoints(in: graphView)
+        drawCurve(in: graphView)
+        drawPoints(in: graphView)
     }
     
     private func drawCurve(in graphView: DrawerView) {
@@ -65,15 +65,15 @@ public class BezierGraph: Graph {
         
         let path = self.curve(points: points)
         
-        self.breakLineShape.lineWidth   = self.thickness
-        self.breakLineShape.strokeColor = self.color.cgColor
+        breakLineShape.lineWidth   = self.thickness
+        breakLineShape.strokeColor = self.color.cgColor
         
-        self.breakLineShape.path = path.cgPath
-        self.addSublayer(self.breakLineShape)
+        breakLineShape.path = path.cgPath
+        addSublayer(self.breakLineShape)
         
         
         // Draw gradient
-        if self.gradientColors != nil {
+        if gradientColors != nil {
             let maskPath = path
             if let initPoint = points.first, let minX = points.first?.x, let maxX = points.last?.x {
                 let minY = graphView.bounds.height

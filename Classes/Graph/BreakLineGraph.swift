@@ -51,10 +51,10 @@ public class BreakLineGraph: Graph {
     // MARK: - Draw
 
     override func drawGraph(in graphView: DrawerView) {
-        self.sublayers = nil
+        sublayers = nil
         
-        self.drawBreakLine(in: graphView)
-        self.drawPoints(in: graphView)
+        drawBreakLine(in: graphView)
+        drawPoints(in: graphView)
     }
     
     private func drawBreakLine(in graphView: DrawerView) {
@@ -69,14 +69,14 @@ public class BreakLineGraph: Graph {
             path.addLine(to: points[i])
         }
         
-        self.breakLineShape.lineWidth   = self.thickness
-        self.breakLineShape.strokeColor = self.color.cgColor
+        breakLineShape.lineWidth   = thickness
+        breakLineShape.strokeColor = color.cgColor
         
-        self.breakLineShape.path = path.cgPath
-        self.addSublayer(self.breakLineShape)
+        breakLineShape.path = path.cgPath
+        addSublayer(breakLineShape)
         
         // Draw gradient
-        if self.gradientColors != nil {
+        if gradientColors != nil {
             let maskPath = path
             if let minX = points.first?.x, let maxX = points.last?.x {
                 let minY = graphView.bounds.height
@@ -85,7 +85,7 @@ public class BreakLineGraph: Graph {
                 maskPath.addLine(to: firstPoint)
             }
             
-            self.drawGradientBackground(path: maskPath, in: graphView)
+            drawGradientBackground(path: maskPath, in: graphView)
         }
     }
     

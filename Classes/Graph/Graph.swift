@@ -59,21 +59,21 @@ public class Graph: CALayer, CALayerDelegate {
         let existingPoints = self.points.compactMap({ $0.x })
         let newPoints = data.filter({ !existingPoints.contains($0.x) })
         
-        self.points.append(contentsOf: newPoints)
-        self.points.sort(by: { $0.x < $1.x})
+        points.append(contentsOf: newPoints)
+        points.sort(by: { $0.x < $1.x})
     }
     
     
     // MARK: - Draw
     
     func drawGraph(in graphView: DrawerView) {
-        self.sublayers = nil
+        sublayers = nil
         
-        self.drawPoints(in: graphView)
+        drawPoints(in: graphView)
     }
     
     func drawPoints(in graphView: DrawerView) {
-        self.fetchRequiredPoints(in: graphView)
+        fetchRequiredPoints(in: graphView)
         
         for point in points {
             if !point.isVisible(inFrame: graphView.dataFrame) {

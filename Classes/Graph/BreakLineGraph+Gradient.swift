@@ -13,9 +13,9 @@ extension BreakLineGraph {
         let maskLayer = CAShapeLayer()
         maskLayer.path = path.cgPath
 
-        self.gradientLayer.frame = graphView.bounds
-        self.gradientLayer.mask = maskLayer
+        gradientLayer.frame = graphView.bounds
+        gradientLayer.mask = maskLayer
 
-        self.insertSublayer(self.gradientLayer, at: 0)
+        insertSublayer(gradientLayer, at: 0)
     }
 }
