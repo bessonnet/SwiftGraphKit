@@ -17,7 +17,7 @@ public class BreakLineGraph: Graph {
     }
     public var thickness: CGFloat = 3.0
     
-    private var breakLineShape: CAShapeLayer = {
+    var breakLineShape: CAShapeLayer = {
         let layer = CAShapeLayer()
         layer.fillColor = UIColor.clear.cgColor
         return layer
@@ -57,7 +57,7 @@ public class BreakLineGraph: Graph {
         drawPoints(in: graphView)
     }
     
-    private func drawBreakLine(in graphView: DrawerView) {
+    func drawBreakLine(in graphView: DrawerView) {
         let curvePoints = self.needPoints(in: graphView)        
         let points = curvePoints.compactMap({ graphView.convertPoint(from: $0.point) })
         guard let firstPoint = points.first else { return }

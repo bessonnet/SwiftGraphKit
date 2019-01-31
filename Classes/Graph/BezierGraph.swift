@@ -8,45 +8,8 @@
 
 import UIKit
 
-public class BezierGraph: Graph {
-    public var color: UIColor = UIColor.blue.withAlphaComponent(0.4)
-    public var gradientColors: [UIColor]? = nil {
-        didSet {
-            gradientLayer.colors = gradientColors?.compactMap({ $0.cgColor })
-        }
-    }
-    public var thickness: CGFloat = 3.0
+public class BezierGraph: BreakLineGraph {
     
-    private var breakLineShape: CAShapeLayer = {
-        let layer = CAShapeLayer()
-        layer.fillColor = UIColor.clear.cgColor
-        return layer
-    }()
-    
-    var gradientLayer: CAGradientLayer = {
-        let gradientLayer = CAGradientLayer()
-        return gradientLayer
-    }()
-    
-    // MARK: - Init
-    
-    public override init() {
-        super.init()
-        
-        breakLineShape.delegate = self
-        gradientLayer.delegate  = self
-    }
-    
-    public override init(function: @escaping Function, step: CGFloat, defaultPoint: GraphPoint) {
-        super.init(function: function, step: step, defaultPoint: defaultPoint)
-        
-        breakLineShape.delegate = self
-        gradientLayer.delegate  = self
-    }
-    
-    public required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
     
     // MARK: - Draw
     
@@ -65,8 +28,8 @@ public class BezierGraph: Graph {
         
         let path = self.curve(points: points)
         
-        breakLineShape.lineWidth   = self.thickness
-        breakLineShape.strokeColor = self.color.cgColor
+        breakLineShape.lineWidth   = thickness
+        breakLineShape.strokeColor = color.cgColor
         
         breakLineShape.path = path.cgPath
         addSublayer(self.breakLineShape)
@@ -86,7 +49,7 @@ public class BezierGraph: Graph {
         }
     }
     
-    func needPoints(in graphView: DrawerView) -> [GraphPoint] {
+    override func needPoints(in graphView: DrawerView) -> [GraphPoint] {
         guard let firstVisiblePoint = points.first(where: { $0.isVisible(inFrame: graphView.dataFrame)}) else { return [GraphPoint]() }
         guard let lastVisiblePoint = points.reversed().first(where: { $0.isVisible(inFrame: graphView.dataFrame)}) else { return [GraphPoint]() }
         

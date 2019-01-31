@@ -31,7 +31,6 @@
 		56E8985A21983D85006D1C3E /* DualRoundedBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E8984221983AA3006D1C3E /* DualRoundedBar.swift */; };
 		56E8985B21983D85006D1C3E /* RoundedPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E8984321983AA3006D1C3E /* RoundedPoint.swift */; };
 		56E8985C21983D85006D1C3E /* BezierGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E8983721983A8B006D1C3E /* BezierGraph.swift */; };
-		56E8985D21983D85006D1C3E /* BezierGraph+Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E8983921983A8B006D1C3E /* BezierGraph+Gradient.swift */; };
 		56E8985E21983D85006D1C3E /* BreakLineGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E8983821983A8B006D1C3E /* BreakLineGraph.swift */; };
 		56E8985F21983D85006D1C3E /* CGPoint+Norm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E8983621983A8B006D1C3E /* CGPoint+Norm.swift */; };
 		56E8986021983D85006D1C3E /* Graph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E8983A21983A8B006D1C3E /* Graph.swift */; };
@@ -134,7 +133,6 @@
 		56E8983621983A8B006D1C3E /* CGPoint+Norm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGPoint+Norm.swift"; sourceTree = "<group>"; };
 		56E8983721983A8B006D1C3E /* BezierGraph.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BezierGraph.swift; sourceTree = "<group>"; };
 		56E8983821983A8B006D1C3E /* BreakLineGraph.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BreakLineGraph.swift; sourceTree = "<group>"; };
-		56E8983921983A8B006D1C3E /* BezierGraph+Gradient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "BezierGraph+Gradient.swift"; sourceTree = "<group>"; };
 		56E8983A21983A8B006D1C3E /* Graph.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Graph.swift; sourceTree = "<group>"; };
 		56E8984121983AA3006D1C3E /* GraphPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphPoint.swift; sourceTree = "<group>"; };
 		56E8984221983AA3006D1C3E /* DualRoundedBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DualRoundedBar.swift; sourceTree = "<group>"; };
@@ -372,7 +370,6 @@
 			children = (
 				56E8984021983A90006D1C3E /* Point */,
 				56E8983721983A8B006D1C3E /* BezierGraph.swift */,
-				56E8983921983A8B006D1C3E /* BezierGraph+Gradient.swift */,
 				56E8983821983A8B006D1C3E /* BreakLineGraph.swift */,
 				563FC6C4220248BF00A3CC76 /* BreakLineGraph+Gradient.swift */,
 				56E8983621983A8B006D1C3E /* CGPoint+Norm.swift */,
@@ -771,7 +768,6 @@
 				56E89872219841E1006D1C3E /* GraphView.swift in Sources */,
 				56E8986821983D9C006D1C3E /* DrawerView+Autoresize.swift in Sources */,
 				56E8985F21983D85006D1C3E /* CGPoint+Norm.swift in Sources */,
-				56E8985D21983D85006D1C3E /* BezierGraph+Gradient.swift in Sources */,
 				56EFDA2621C28E9A00DF4B83 /* RoundedBar.swift in Sources */,
 				56E8985721983D7B006D1C3E /* HorizontalLine.swift in Sources */,
 				56E8985821983D7F006D1C3E /* VerticalLine.swift in Sources */,
