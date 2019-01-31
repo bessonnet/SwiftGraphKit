@@ -36,7 +36,7 @@ public class BezierGraph: BreakLineGraph {
         
         
         // Draw gradient
-        if gradientColors != nil {
+        if haveBackground {
             let maskPath = path
             if let initPoint = points.first, let minX = points.first?.x, let maxX = points.last?.x {
                 let minY = graphView.bounds.height

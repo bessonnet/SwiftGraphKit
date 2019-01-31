@@ -10,11 +10,21 @@ import UIKit
 
 public class BreakLineGraph: Graph {
     public var color: UIColor = UIColor.blue.withAlphaComponent(0.4)
-    public var gradientColors: [UIColor]? = nil {
+    public var backgroundGraphGradientColors: [UIColor]? {
         didSet {
-            self.gradientLayer.colors = gradientColors?.compactMap({ $0.cgColor })
+            self.gradientLayer.colors = backgroundGraphGradientColors?.compactMap({ $0.cgColor })
         }
     }
+    public var backgroundGraphColor: UIColor? {
+        didSet {
+            guard let color = backgroundGraphColor else { return }
+            self.gradientLayer.colors = [color.cgColor, color.cgColor]
+        }
+    }
+    var haveBackground: Bool {
+        return backgroundGraphColor != nil  || backgroundGraphGradientColors != nil
+    }
+    
     public var thickness: CGFloat = 3.0
     
     var breakLineShape: CAShapeLayer = {
@@ -76,7 +86,7 @@ public class BreakLineGraph: Graph {
         addSublayer(breakLineShape)
         
         // Draw gradient
-        if gradientColors != nil {
+        if haveBackground {
             let maskPath = path
             if let minX = points.first?.x, let maxX = points.last?.x {
                 let minY = graphView.bounds.height

@@ -27,5 +27,10 @@ extension UIColor {
             static let top = UIColor(red: 60, green: 141, blue: 249)
             static let bot = UIColor(red: 255, green: 255, blue: 255, alpha: 0)
         }
+        
+        struct Multi {
+            static let green = UIColor(red: 0, green: 250, blue: 100, alpha: 100)
+            static let blue  = UIColor(red: 63, green: 163, blue: 251, alpha: 100)
+        }
     }
 }
