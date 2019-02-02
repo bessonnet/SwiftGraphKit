@@ -20,7 +20,7 @@ class MultipleGraphViewController: UIViewController {
     private lazy var firstGraph: BreakLineGraph = {
         let graph = BreakLineGraph()
         graph.color     = .darkGray
-        graph.backgroundGraphColor = UIColor.Graph.Multi.green
+        graph.graphBackground = GraphBackground(color: UIColor.Graph.Multi.green, cornerRadius: 10)
         graph.thickness = 3.0
         return graph
     }()
@@ -28,7 +28,7 @@ class MultipleGraphViewController: UIViewController {
     private lazy var secondGraph: BreakLineGraph = {
         let graph = BreakLineGraph()
         graph.color     = .darkGray
-        graph.backgroundGraphColor = UIColor.Graph.Multi.blue
+        graph.graphBackground = GraphBackground(color: UIColor.Graph.Multi.blue, cornerRadius: 10)
         graph.thickness = 3.0
         return graph
     }()

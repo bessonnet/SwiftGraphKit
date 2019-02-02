@@ -10,7 +10,7 @@ import UIKit
 extension BreakLineGraph {
     
     func drawBackground(path: UIBezierPath, between firstPoint: CGPoint, to lastPoint: CGPoint, in graphView: DrawerView) {
-        if haveBackground {
+        if graphBackground?.haveBackground == true {
             let maskPath = path
             let minX = firstPoint.x
             let maxX = lastPoint.x
@@ -24,12 +24,15 @@ extension BreakLineGraph {
     }
 
     private func drawGradientBackground(path: UIBezierPath, in graphView: DrawerView) {
+        guard let colorRefs = graphBackground?.colorRefs else { return }
+        
         let maskLayer = CAShapeLayer()
         maskLayer.path = path.cgPath
 
+        gradientLayer.colors = colorRefs
         gradientLayer.frame = graphView.bounds
         gradientLayer.mask = maskLayer
-
+        
         insertSublayer(gradientLayer, at: 0)
     }
 }

@@ -25,7 +25,7 @@ class ComplexeGraphViewController: UIViewController {
         
         graph.color         = UIColor.Graph.curve
         graph.thickness     = 3.0
-        graph.backgroundGraphGradientColors = [UIColor.Graph.Gradient.top, UIColor.Graph.Gradient.bot]
+        graph.graphBackground = GraphBackground(gradientColors: [UIColor.Graph.Gradient.top, UIColor.Graph.Gradient.bot])
         graph.dataSource    = self
         
         return graph
