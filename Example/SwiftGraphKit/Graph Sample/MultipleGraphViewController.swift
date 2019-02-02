@@ -73,7 +73,7 @@ class MultipleGraphViewController: UIViewController {
         var points = [GraphPoint]()
         
         for x in Int(dataArea.minX)..<Int(dataArea.maxX) {
-            let y = Float.random(in: -10.0..<10.0)
+            let y = Float.random(in: 0..<10.0)
             let roundedPoint = RoundedPoint(x: CGFloat(x), y: CGFloat(y))
             points.append(roundedPoint)
         }
@@ -85,7 +85,7 @@ class MultipleGraphViewController: UIViewController {
         var points2 = [GraphPoint]()
         
         for x in Int(dataArea.minX)..<Int(dataArea.maxX) {
-            let y = Float.random(in: -10.0..<10.0)
+            let y = Float.random(in: 0..<10.0)
             let roundedPoint = RoundedPoint(x: CGFloat(x), y: CGFloat(y))
             points2.append(roundedPoint)
         }
