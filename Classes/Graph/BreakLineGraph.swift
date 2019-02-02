@@ -85,17 +85,9 @@ public class BreakLineGraph: Graph {
         breakLineShape.path = path.cgPath
         addSublayer(breakLineShape)
         
-        // Draw gradient
-        if haveBackground {
-            let maskPath = path
-            if let minX = points.first?.x, let maxX = points.last?.x {
-                let minY = graphView.bounds.height
-                maskPath.addLine(to: CGPoint(x: maxX, y: minY))
-                maskPath.addLine(to: CGPoint(x: minX, y: minY))
-                maskPath.addLine(to: firstPoint)
-            }
-            
-            drawGradientBackground(path: maskPath, in: graphView)
+        // Draw background of graph base of path
+        if let first = points.first, let last = points.last {
+            drawBackground(path: path, between: first, to: last, in: graphView)
         }
     }
     
