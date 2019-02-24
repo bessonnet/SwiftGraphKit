@@ -31,6 +31,12 @@ class ComplexeGraphViewController: UIViewController {
         return graph
     }()
     
+    private lazy var reportDetail: ReportDetail = {
+        let reportDetail = ReportDetail()
+        reportDetail.translatesAutoresizingMaskIntoConstraints = false
+        return reportDetail
+    }()
+    
     // MARK: - Life cycle
     
     override func viewDidLoad() {
@@ -47,6 +53,7 @@ class ComplexeGraphViewController: UIViewController {
     private func setupInterface() {
         view.backgroundColor = .white
         view.addSubview(graphView)
+        view.addSubview(reportDetail)
     }
     
     private func setupConstraints() {
@@ -55,6 +62,10 @@ class ComplexeGraphViewController: UIViewController {
             graphView.leftAnchor.constraint(equalTo: view.leftAnchor),
             graphView.rightAnchor.constraint(equalTo: view.rightAnchor),
             graphView.heightAnchor.constraint(equalTo: graphView.widthAnchor),
+            
+            reportDetail.topAnchor.constraint(equalTo: graphView.bottomAnchor),
+            reportDetail.leftAnchor.constraint(equalTo: view.leftAnchor),
+            reportDetail.rightAnchor.constraint(equalTo: view.rightAnchor)
             ])
     }
     
