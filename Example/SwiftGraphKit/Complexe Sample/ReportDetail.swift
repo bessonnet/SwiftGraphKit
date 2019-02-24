@@ -9,16 +9,38 @@
 import UIKit
 
 class ReportDetail: UIView {
+    
+    private lazy var dateTitleLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.text = "Date:"
+        label.font = UIFont.boldSystemFont(ofSize: 20)
+        label.textColor = UIColor.lightGray
+        label.textAlignment = .left
+        return label
+    }()
+    
+    private lazy var amountTitleLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.text = "Amount:"
+        label.font = UIFont.boldSystemFont(ofSize: 20)
+        label.textColor = UIColor.lightGray
+        label.textAlignment = .left
+        return label
+    }()
 
     private lazy var dateLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
+        label.textAlignment = .left
         return label
     }()
     
     private lazy var amountLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
+        label.textAlignment = .left
         return label
     }()
     
@@ -38,21 +60,31 @@ class ReportDetail: UIView {
     // MARK: - Setup Interface
     
     private func setupInterface() {
+        addSubview(dateTitleLabel)
+        addSubview(amountTitleLabel)
         addSubview(amountLabel)
         addSubview(dateLabel)
     }
     
     private func setupConstraints() {
         NSLayoutConstraint.activate([
-            dateLabel.topAnchor.constraint(equalTo: topAnchor),
-            dateLabel.leftAnchor.constraint(equalTo: leftAnchor),
-            dateLabel.heightAnchor.constraint(equalToConstant: 60),
+            dateTitleLabel.topAnchor.constraint(equalTo: topAnchor, constant: 10),
+            dateTitleLabel.leftAnchor.constraint(equalTo: leftAnchor, constant: 16),
             
-            amountLabel.topAnchor.constraint(equalTo: topAnchor),
-            amountLabel.rightAnchor.constraint(equalTo: rightAnchor),
-            amountLabel.heightAnchor.constraint(equalToConstant: 60),
+            amountTitleLabel.topAnchor.constraint(equalTo: topAnchor, constant: 10),
+            amountTitleLabel.rightAnchor.constraint(equalTo: rightAnchor, constant: -16),
             
-            dateLabel.widthAnchor.constraint(equalTo: amountLabel.widthAnchor)
+            dateTitleLabel.widthAnchor.constraint(equalTo: amountTitleLabel.widthAnchor),
+            dateTitleLabel.rightAnchor.constraint(equalTo: amountTitleLabel.leftAnchor, constant: 10),
+            
+            dateLabel.topAnchor.constraint(equalTo: dateTitleLabel.bottomAnchor),
+            dateLabel.leftAnchor.constraint(equalTo: leftAnchor, constant: 16),
+            
+            amountLabel.topAnchor.constraint(equalTo: amountTitleLabel.bottomAnchor),
+            amountLabel.rightAnchor.constraint(equalTo: rightAnchor, constant: -16),
+            
+            dateLabel.widthAnchor.constraint(equalTo: amountLabel.widthAnchor),
+            dateLabel.rightAnchor.constraint(equalTo: amountLabel.leftAnchor, constant: 10),
             ])
     }
     
@@ -64,8 +96,15 @@ class ReportDetail: UIView {
         return formater
     }()
     
+    lazy var amountFormatter: NumberFormatter = {
+        let formater = NumberFormatter()
+        formater.numberStyle = .currency
+        formater.locale = Locale.current
+        return formater
+    }()
+    
     func fill(report: DailyReport) {
-        amountLabel.text = "\(report.amount) $"
+        amountLabel.text = amountFormatter.string(from: report.amount as NSNumber)
         dateLabel.text = "\(dateFormater.string(from: report.date))"
     }
 
