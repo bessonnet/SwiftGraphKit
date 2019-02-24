@@ -69,7 +69,7 @@ graph.addData(data: points)
 
 ### Result
 
-![Build Platform](Images/graph.png)
+![Build Platform](Images/graphKit_scroll.gif)
 
 ## DataFrame
 
