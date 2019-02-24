@@ -118,10 +118,10 @@ extension ComplexeGraphViewController: GraphDataSource {
 
 extension ComplexeGraphViewController: AxisDelegate {
     func needStringValue(for axis: Axis, at index: CGFloat) -> String {
-        let i = Int(index)
-        guard i >= 0, i <= 6 else { return "" }
-        
-        let weekdays = ["S", "M", "T", "W", "T", "F", "S"]
-        return weekdays[i]
+        if let report = model.report(for: Int(index)) {
+            let date = report.date
+            return date.weekSymbol()
+        }
+        return ""
     }
 }
