@@ -26,6 +26,9 @@ class ReportDetail: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        
+        setupInterface()
+        setupConstraints()
     }
     
     required init?(coder aDecoder: NSCoder) {

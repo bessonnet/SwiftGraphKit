@@ -17,6 +17,7 @@ class ComplexeGraphViewController: UIViewController {
         let graphView = GraphView()
         graphView.translatesAutoresizingMaskIntoConstraints = false
         graphView.allowsAutoresize = true
+        graphView.delegate = self
         return graphView
     }()
     
@@ -46,6 +47,7 @@ class ComplexeGraphViewController: UIViewController {
         setupConstraints()
         
         configureGraphView()
+        configureDetail()
     }
     
     // MARK: - Setup Interface
@@ -65,7 +67,8 @@ class ComplexeGraphViewController: UIViewController {
             
             reportDetail.topAnchor.constraint(equalTo: graphView.bottomAnchor),
             reportDetail.leftAnchor.constraint(equalTo: view.leftAnchor),
-            reportDetail.rightAnchor.constraint(equalTo: view.rightAnchor)
+            reportDetail.rightAnchor.constraint(equalTo: view.rightAnchor),
+            reportDetail.bottomAnchor.constraint(equalTo: view.bottomAnchor)
             ])
     }
     
@@ -95,6 +98,11 @@ class ComplexeGraphViewController: UIViewController {
         graphView.add(graph: graph)
         graphView.configure(dataFrame: dataFrame, dataArea: dataArea)
     }
+    
+    private func configureDetail() {
+        guard let report = model.reports.last else { return }
+        reportDetail.fill(report: report)
+    }
 
 }
 
@@ -123,6 +131,9 @@ extension ComplexeGraphViewController: GraphDataSource {
             }
         }
         
+        // select last point
+        points.last?.selected = true
+        
         completion(points)
     }
 }
@@ -135,4 +146,16 @@ extension ComplexeGraphViewController: AxisDelegate {
         }
         return ""
     }
+}
+
+extension ComplexeGraphViewController: GraphViewDelegate {
+    
+    func tap(on graphView: GraphView, point: GraphPoint) {
+        guard let report = model.report(for: Int(point.x)) else { return }
+        reportDetail.fill(report: report)
+    }
+    
+    func longPress(on graphView: GraphView, point: GraphPoint) {}
+    
+    func endLongPress(on graphView: GraphView) {}
 }
