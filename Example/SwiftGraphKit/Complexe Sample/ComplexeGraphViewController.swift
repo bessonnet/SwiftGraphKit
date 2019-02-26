@@ -126,13 +126,11 @@ extension ComplexeGraphViewController: GraphDataSource {
                 roundedPoint.radius         = 5
                 roundedPoint.selectedRadius = 6
                 roundedPoint.thickness      = 3
+                roundedPoint.selected       = x == Int(model.dataFrame.maxX) - 1
                 
                 points.append(roundedPoint)
             }
         }
-        
-        // select last point
-        points.last?.selected = true
         
         completion(points)
     }
