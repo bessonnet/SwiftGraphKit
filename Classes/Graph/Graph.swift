@@ -77,7 +77,7 @@ public class Graph: CALayer, CALayerDelegate {
         
         for point in points {
             point.prepareDraw(in: graphView)
-            if !point.isVisible(inDataFrame: graphView.dataFrame) {
+            if !point.isVisible(inFrame: graphView.frame) {
                 continue
             }
             if point.superlayer == nil {

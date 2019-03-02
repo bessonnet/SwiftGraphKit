@@ -77,6 +77,10 @@ public class GraphPoint: CALayer, CALayerDelegate {
         return frame.contains(CGPoint(x: x, y: y))
     }
     
+    public func isVisible(inFrame frame: CGRect) -> Bool {
+        return frame.intersects(rect)
+    }
+    
     // MARK: - CALayerDelegate
     
     public func action(for layer: CALayer, forKey event: String) -> CAAction? {
