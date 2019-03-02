@@ -14,6 +14,7 @@ class MultipleGraphViewController: UIViewController {
     private lazy var graphView: GraphView = {
         let graphView = GraphView()
         graphView.translatesAutoresizingMaskIntoConstraints = false
+        graphView.graphAreaCornerRadius = 10
         return graphView
     }()
     

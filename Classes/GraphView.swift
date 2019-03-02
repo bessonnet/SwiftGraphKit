@@ -38,6 +38,11 @@ public class GraphView: UIView {
             self.drawerView.zoomManager.allowsZooming = allowsZooming
         }
     }
+    public var graphAreaCornerRadius: CGFloat = 0.0 {
+        didSet {
+            self.drawerView.graphAreaCornerRadius = graphAreaCornerRadius
+        }
+    }
     
     public weak var delegate: GraphViewDelegate? {
         didSet {

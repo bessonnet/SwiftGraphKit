@@ -32,6 +32,11 @@ public class DrawerView: UIView {
             self.forceToRedraw = true
         }
     }
+    public var graphAreaCornerRadius: CGFloat = 0.0 {
+        didSet {
+            self.mainLayer.cornerRadius = graphAreaCornerRadius
+        }
+    }
     
     fileprivate var previousDataFrame = CGRect.zero
     var dataFrame: CGRect = CGRect(x: 0, y: 0, width: 10, height: 10)
