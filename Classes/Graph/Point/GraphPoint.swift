@@ -22,9 +22,13 @@ public class GraphPoint: CALayer, CALayerDelegate {
         return y
     }
     
+    /// point represent position of GraphPoint on dataFrame (unit = unit of graph)
     public var point: CGPoint {
         return CGPoint(x: x, y: y)
     }
+    
+    /// rect is rectangle that contains draw of point on screen (unit = pixel)
+    public var rect: CGRect = .zero
     
     public var shapeLayer = CAShapeLayer()
         
@@ -55,9 +59,12 @@ public class GraphPoint: CALayer, CALayerDelegate {
     
     // MARK: - Drawing methods
     
-    public func drawPoint(in graphView: DrawerView) {
+    public func prepareDraw(in graphView: DrawerView) {
         position = graphView.convertPoint(from: CGPoint(x: x, y: y))
-        
+        rect = CGRect(x: position.x - 2, y: position.y - 2, width: 4, height: 4)
+    }
+    
+    public func drawPoint(in graphView: DrawerView) {
         let path = UIBezierPath(ovalIn: CGRect(x: -2, y: -2, width: 4, height: 4))
         shapeLayer.path = path.cgPath
         shapeLayer.fillColor = color.cgColor
@@ -66,7 +73,7 @@ public class GraphPoint: CALayer, CALayerDelegate {
     
     // MARK: - Helpers
     
-    public func isVisible(inFrame frame: CGRect) -> Bool {
+    public func isVisible(inDataFrame frame: CGRect) -> Bool {
         return frame.contains(CGPoint(x: x, y: y))
     }
     

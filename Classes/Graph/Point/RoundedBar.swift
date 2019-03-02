@@ -36,8 +36,7 @@ public class RoundedBar: GraphPoint {
         fatalError("init(coder:) has not been implemented")
     }
     
-    public override func drawPoint(in graphView: DrawerView) {
-        
+    public override func prepareDraw(in graphView: DrawerView) {
         let bottom = graphView.convertPoint(from: CGPoint(x: self.x, y: self.minY))
         let top    = graphView.convertPoint(from: CGPoint(x: self.x, y: self.maxY))
         
@@ -45,8 +44,10 @@ public class RoundedBar: GraphPoint {
         let x       = bottom.x - width/2
         let height  = bottom.y - top.y
         
-        let rect = CGRect(x: x, y: y, width: width, height: height)
-        
+        rect = CGRect(x: x, y: y, width: width, height: height)
+    }
+    
+    public override func drawPoint(in graphView: DrawerView) {
         let path = UIBezierPath(roundedRect: rect, cornerRadius: radius)
         
         bar.path = path.cgPath

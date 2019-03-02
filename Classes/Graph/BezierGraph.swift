@@ -42,8 +42,8 @@ public class BezierGraph: BreakLineGraph {
     }
     
     override func needPoints(in graphView: DrawerView) -> [GraphPoint] {
-        guard let firstVisiblePoint = points.first(where: { $0.isVisible(inFrame: graphView.dataFrame)}) else { return [GraphPoint]() }
-        guard let lastVisiblePoint = points.reversed().first(where: { $0.isVisible(inFrame: graphView.dataFrame)}) else { return [GraphPoint]() }
+        guard let firstVisiblePoint = points.first(where: { $0.isVisible(inDataFrame: graphView.dataFrame)}) else { return [GraphPoint]() }
+        guard let lastVisiblePoint = points.reversed().first(where: { $0.isVisible(inDataFrame: graphView.dataFrame)}) else { return [GraphPoint]() }
         
         let firstIndex = max(0, (points.index(of: firstVisiblePoint) ?? 0) - 2)
         let lastIndex  = max(points.count, (points.index(of: lastVisiblePoint) ?? 0) + 1)

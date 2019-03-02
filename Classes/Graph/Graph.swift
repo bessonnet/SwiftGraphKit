@@ -76,7 +76,8 @@ public class Graph: CALayer, CALayerDelegate {
         fetchRequiredPoints(in: graphView)
         
         for point in points {
-            if !point.isVisible(inFrame: graphView.dataFrame) {
+            point.prepareDraw(in: graphView)
+            if !point.isVisible(inDataFrame: graphView.dataFrame) {
                 continue
             }
             if point.superlayer == nil {
@@ -156,7 +157,7 @@ public class Graph: CALayer, CALayerDelegate {
         var visiblePoints = self.points
         
         if norm == .quadratic {
-            visiblePoints = self.points.filter({ $0.isVisible(inFrame: graphView.dataFrame )})
+            visiblePoints = self.points.filter({ $0.isVisible(inDataFrame: graphView.dataFrame )})
         }
         
         var minDistance: CGFloat = .greatestFiniteMagnitude

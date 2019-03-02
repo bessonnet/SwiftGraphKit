@@ -20,9 +20,13 @@ public class RoundedPoint: GraphPoint {
     public var selectedRadius:  CGFloat = 3.0
     public var thickness:       CGFloat = 2.0
     
-    public override func drawPoint(in graphView: DrawerView) {
+    public override func prepareDraw(in graphView: DrawerView) {
         position = graphView.convertPoint(from: CGPoint(x: x, y: y))
-        
+        let radius: CGFloat = selected ? selectedRadius + thickness : self.radius + thickness
+        rect = CGRect(x: position.x - radius, y: position.y - radius, width: 2 * radius, height: 2 * radius)
+    }
+    
+    public override func drawPoint(in graphView: DrawerView) {
         let radius = selected ? self.radius : selectedRadius
         
         let path = UIBezierPath(ovalIn: CGRect(x: -radius, y: -radius, width: 2 * radius, height: 2 * radius))
