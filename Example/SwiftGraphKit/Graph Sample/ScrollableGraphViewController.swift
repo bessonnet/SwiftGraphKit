@@ -64,7 +64,7 @@ class ScrollableGraphViewController: UIViewController {
         var points = [GraphPoint]()
         
         for x in Int(dataArea.minX)..<Int(dataArea.maxX) {
-            let y = Float.random(in: -10.0..<10.0)
+            let y = Float.random(in: 0.0..<10.0)
             let roundedPoint = RoundedPoint(x: CGFloat(x), y: CGFloat(y))
             points.append(roundedPoint)
         }
