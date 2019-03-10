@@ -8,7 +8,8 @@
 
 import UIKit
 
-class AxisItem: CALayer, CALayerDelegate {
+class AxisItem: CALayer {
+    
     var backgroundLayerColor: UIColor = UIColor.white.withAlphaComponent(0.5)
     var textColor: UIColor = UIColor.black {
         didSet {
@@ -90,8 +91,9 @@ class AxisItem: CALayer, CALayerDelegate {
         self.backgroundLayer.fillColor = self.backgroundLayerColor.cgColor
         self.backgroundLayer.path = UIBezierPath.init(roundedRect: rect, cornerRadius: 10).cgPath
     }
-    
-    // MARK: - CALayerDelegate
+}
+
+extension AxisItem: CALayerDelegate {
     
     public func action(for layer: CALayer, forKey event: String) -> CAAction? {
         return NSNull()

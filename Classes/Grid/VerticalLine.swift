@@ -8,7 +8,7 @@
 
 import UIKit
 
-class VerticalLine: CALayer, CALayerDelegate {
+class VerticalLine: CALayer {
     var index: CGFloat
     var color: UIColor = UIColor.lightGray
     
@@ -46,8 +46,9 @@ class VerticalLine: CALayer, CALayerDelegate {
         self.lineLayer.strokeColor = self.color.cgColor
         self.lineLayer.path = path.cgPath
     }
+}
     
-    // MARK: - CALayerDelegate
+extension VerticalLine: CALayerDelegate {
     
     public func action(for layer: CALayer, forKey event: String) -> CAAction? {
         return NSNull()

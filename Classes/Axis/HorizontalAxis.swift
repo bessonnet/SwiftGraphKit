@@ -31,6 +31,8 @@ public class HorizontalAxis: CALayer, Axis {
         self.axisPosition = position
         self.pool = LayerPool(element: AxisItem(text: ""), step: step)
         super.init()
+        
+        self.delegate = self
     }
     
     public override init(layer: Any) {
@@ -44,6 +46,8 @@ public class HorizontalAxis: CALayer, Axis {
             self.axisPosition = axis.axisPosition
             self.pool.step = axis.step
         }
+        
+        self.delegate = self
     }
     
     required public init?(coder aDecoder: NSCoder) {
@@ -81,5 +85,12 @@ public class HorizontalAxis: CALayer, Axis {
     
     public func removeAllData() {
         self.pool.removeAllData()
+    }
+}
+
+extension HorizontalAxis: CALayerDelegate {
+    
+    public func action(for layer: CALayer, forKey event: String) -> CAAction? {
+        return NSNull()
     }
 }

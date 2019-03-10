@@ -30,6 +30,8 @@ public class VerticalAxis: CALayer, Axis {
         self.axisPosition = position
         self.pool = LayerPool(element: AxisItem(text: ""), step: step)
         super.init()
+        
+        self.delegate = self
     }
     
     public override init(layer: Any) {
@@ -43,6 +45,8 @@ public class VerticalAxis: CALayer, Axis {
             self.axisPosition = axis.axisPosition
             self.pool.step = axis.step
         }
+        
+        self.delegate = self
     }
     
     required public init?(coder aDecoder: NSCoder) {
@@ -81,5 +85,12 @@ public class VerticalAxis: CALayer, Axis {
     
     public func removeAllData() {
         self.pool.removeAllData()
+    }
+}
+
+extension VerticalAxis: CALayerDelegate {
+    
+    public func action(for layer: CALayer, forKey event: String) -> CAAction? {
+        return NSNull()
     }
 }

@@ -26,6 +26,8 @@ public class Grid: CALayer {
         self.horizontalPool = LayerPool(element: HorizontalLine(y: 0), step: stepY)
         
         super.init()
+        
+        self.delegate = self
     }
     
     required public init?(coder aDecoder: NSCoder) {
@@ -91,5 +93,12 @@ public class Grid: CALayer {
         }
         
         return result
+    }
+}
+
+extension Grid: CALayerDelegate {
+    
+    public func action(for layer: CALayer, forKey event: String) -> CAAction? {
+        return NSNull()
     }
 }
