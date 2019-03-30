@@ -45,8 +45,8 @@ public class BezierGraph: BreakLineGraph {
         guard let firstVisiblePoint = points.first(where: { $0.isVisible(inDataFrame: graphView.dataFrame)}) else { return [GraphPoint]() }
         guard let lastVisiblePoint = points.reversed().first(where: { $0.isVisible(inDataFrame: graphView.dataFrame)}) else { return [GraphPoint]() }
         
-        let firstIndex = max(0, (points.index(of: firstVisiblePoint) ?? 0) - 2)
-        let lastIndex  = max(points.count, (points.index(of: lastVisiblePoint) ?? 0) + 1)
+        let firstIndex = max(0, (points.firstIndex(of: firstVisiblePoint) ?? 0) - 2)
+        let lastIndex  = max(points.count, (points.firstIndex(of: lastVisiblePoint) ?? 0) + 1)
         
         var result = [GraphPoint]()
         

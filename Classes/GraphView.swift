@@ -114,7 +114,7 @@ public class GraphView: UIView {
     }
     
     public func remove(graph: Graph) {
-        if let index = graphs.index(of: graph) {
+        if let index = graphs.firstIndex(of: graph) {
             graphs.remove(at: index)
         }        
         self.drawerView.remove(graph: graph)
